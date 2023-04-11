@@ -117,10 +117,8 @@ groups:
                 endpoints:
                     www.de.optimus-dev.cloud.spryker.toys:
                         store: DE
-                        <<: *frontend-auth
                     www.at.optimus-dev.cloud.spryker.toys:
                         store: AT
-                        <<: *frontend-auth
             boffice:
                 application: backoffice
                 endpoints:
