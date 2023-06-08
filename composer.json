@@ -236,6 +236,7 @@
         "codeception/module-rest": "^3.1.0",
         "codeception/module-webdriver": "^3.1.1",
         "composer/package-versions-deprecated": "^1.10.0",
+        "dereuromark/composer-versions-check": "^0.1.0",
         "dms/phpunit-arraysubset-asserts": "^0.4.0",
         "filp/whoops": "^2.7",
         "phpstan/phpstan": "^1.9.2",
@@ -288,7 +289,8 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "sllh/composer-versions-check": true,
-            "spryker-sdk/integrator": true
+            "spryker-sdk/integrator": true,
+            "dereuromark/composer-versions-check": true
         }
     },
     "scripts": {
