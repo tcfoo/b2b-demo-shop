@@ -16,8 +16,8 @@ vendor/bin/console dev:ide-auto-completion:generate
 echo "vendor/bin/codecept build --ansi"
 vendor/bin/codecept build --ansi
 
-echo "vendor/bin/console transfer:databuilder:generate"
-vendor/bin/console transfer:databuilder:generate
+#echo "vendor/bin/console transfer:databuilder:generate"
+#vendor/bin/console transfer:databuilder:generate
 
 echo "vendor/bin/console setup:search"
 vendor/bin/console setup:search

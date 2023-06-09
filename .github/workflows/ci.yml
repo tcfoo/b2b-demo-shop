@@ -92,8 +92,8 @@ jobs:
             - name: Generate transfer objects
               run: vendor/bin/console transfer:generate
 
-            - name: Generate transfer databuilder objects
-              run: vendor/bin/console transfer:databuilder:generate
+#            - name: Generate transfer databuilder objects
+#              run: vendor/bin/console transfer:databuilder:generate
 
             - name: Propel install
               run: |

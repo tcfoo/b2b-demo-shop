@@ -74,12 +74,12 @@ sections:
         setup-seach-create-source-map:
             command: 'vendor/bin/console search:setup:source-map'
 
-    setup-test:
-        codeception-build:
-            command: 'vendor/bin/codecept build --ansi'
-
-        databuilder-generate:
-            command: 'vendor/bin/console transfer:databuilder:generate'
+#    setup-test:
+#        codeception-build:
+#            command: 'vendor/bin/codecept build --ansi'
+#
+#        databuilder-generate:
+#            command: 'vendor/bin/console transfer:databuilder:generate'
 
     demodata:
         import-eu-region-demodata:

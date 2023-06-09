@@ -20,6 +20,7 @@ use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConf
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
 use Spryker\Shared\ContentStorage\ContentStorageConfig;
 use Spryker\Shared\CustomerAccessStorage\CustomerAccessStorageConstants;
+use Spryker\Shared\CustomerStorage\CustomerStorageConfig;
 use Spryker\Shared\Event\EventConfig;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\FileManagerStorage\FileManagerStorageConstants;
@@ -140,5 +141,27 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     protected function getDefaultBoundQueueNamePrefix(): string
     {
         return 'error';
+    }
+
+    /**
+     * @return array<mixed>
+     */
+    protected function getPublishQueueConfiguration(): array
+    {
+        return [
+            ...
+            CustomerStorageConfig::PUBLISH_CUSTOMER_INVALIDATED,
+        ];
+    }
+
+    /**
+     * @return array<mixed>
+     */
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            ...
+            CustomerStorageConfig::CUSTOMER_INVALIDATED_SYNC_STORAGE_QUEUE,
+        ];
     }
 }

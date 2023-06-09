@@ -38,8 +38,8 @@ sections:
         generate-transfers:
             command: 'vendor/bin/console transfer:generate'
 
-        generate-transfer-databuilders:
-            command: 'vendor/bin/console transfer:databuilder:generate'
+#        generate-transfer-databuilders:
+#            command: 'vendor/bin/console transfer:databuilder:generate'
 
         rest-api-generate-documentation:
             command: 'vendor/bin/console rest-api:generate:documentation'

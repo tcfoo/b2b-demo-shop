@@ -167,6 +167,15 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 
+/* Customer */
+$jobs[] = [
+    'name' => 'delete-expired-customer-invalidated',
+    'command' => '$PHP_BIN vendor/bin/console customer:delete-expired-customer-invalidated',
+    'schedule' => '0 0 * * 0',
+    'enable' => true,
+    'stores' => $allStores,
+];
+
 /* Message broker */
 if (Config::get(MessageBrokerAwsConstants::SQS_RECEIVER_CONFIG)) {
     $jobs[] = [
