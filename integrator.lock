@@ -1,230 +1,2861 @@
 {
+  "SprykerShop.AssetWidget": {
+    "wire-widget": {
+      "6d01fb0e79d2897055145f2c76302113f898eda0": {
+        "source": "\\SprykerShop\\Yves\\AssetWidget\\Widget\\AssetWidget",
+        "module": "SprykerShop.AssetWidget",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "SprykerShop.CartPage": {
+    "wire-plugin": {
+      "5c46dd0d51bd1c563fb7c87e43d8fe6535de8954": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\CartPage\\Plugin\\Twig\\CartTwigPlugin",
+        "module": "SprykerShop.CartPage",
+        "module-version": "1.8.0"
+      }
+    }
+  },
   "SprykerShop.CatalogPage": {
     "wire-plugin": {
-      "cfecb5a72dda82e1f1e03fed32136607cbf24209": {
+      "cc44c78062f14804da2071735a2a83be3928eae2": {
         "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
-        "source": "\\SprykerShop\\Yves\\CatalogPage\\Plugin\\Twig\\CategoryFilterTwigPlugin"
+        "source": "\\SprykerShop\\Yves\\CatalogPage\\Plugin\\Twig\\CatalogPageTwigPlugin",
+        "module": "SprykerShop.CatalogPage",
+        "module-version": "1.8.0"
       }
     }
   },
-  "Spryker.Redis": {
+  "SprykerShop.CategoryWidget": {
     "wire-plugin": {
-      "699085dbe2f7f93a59ff8a20d4a0f5fad18c302b": {
-        "target": "\\SprykerShop\\Yves\\WebProfilerWidget\\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins",
-        "source": "\\Spryker\\Yves\\Redis\\Plugin\\WebProfiler\\WebProfilerRedisDataCollectorPlugin"
+      "b55124b19ab5a66a152c18f1adaef1392018a205": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\CategoryWidget\\Plugin\\Twig\\CategoryTwigPlugin",
+        "module": "SprykerShop.CategoryWidget",
+        "module-version": "1.1.0"
       }
     }
   },
-  "Spryker.ZedRequest": {
+  "SprykerShop.ChartWidget": {
     "wire-plugin": {
-      "79d9d400079eceaf17bbbeb306401bcfa1f9838a": {
-        "target": "\\Spryker\\Client\\ZedRequest\\ZedRequestDependencyProvider::getHeaderExpanderPlugins",
-        "source": "\\Spryker\\Client\\ZedRequest\\Plugin\\AcceptEncodingHeaderExpanderPlugin"
+      "44cd51566d0a4f14e312f6a8af13d2d7453673cd": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ChartWidget\\Plugin\\Twig\\ChartTwigPlugin",
+        "module": "SprykerShop.ChartWidget",
+        "module-version": "0.2.0"
+      }
+    }
+  },
+  "SprykerShop.CheckoutPage": {
+    "wire-plugin": {
+      "c08a880ea4d94c36e0278697e6d68b31bbcad6c7": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::extendPaymentMethodHandler",
+        "source": "\\SprykerShop\\Yves\\CheckoutPage\\Plugin\\StepEngine\\PaymentForeignHandlerPlugin",
+        "arguments": {
+          "append-arguments": [
+            {
+              "value": "\\Generated\\Shared\\Transfer\\PaymentTransfer::FOREIGN_PAYMENTS",
+              "is_literal": false
+            }
+          ]
+        },
+        "module": "SprykerShop.CheckoutPage",
+        "module-version": "3.20.0"
+      }
+    }
+  },
+  "SprykerShop.CmsBlockWidget": {
+    "wire-plugin": {
+      "bf2e8babae5e97529c0a917444e8617251c11bb9": {
+        "target": "\\SprykerShop\\Yves\\CmsBlockWidget\\CmsBlockWidgetDependencyProvider::getTwigExtensionPlugins",
+        "source": "\\SprykerShop\\Yves\\CmsBlockWidget\\Plugin\\Twig\\CmsBlockWidgetTwigPlugin",
+        "module": "SprykerShop.CmsBlockWidget",
+        "module-version": "1.2.0"
       },
-      "c88394bbe6b399a0388d9527da54cbcc99bdca1e": {
-        "target": "\\Spryker\\Client\\ZedRequest\\ZedRequestDependencyProvider::getHeaderExpanderPlugins",
-        "source": "\\Spryker\\Client\\ZedRequest\\Plugin\\AuthTokenHeaderExpanderPlugin"
-      },
-      "14d3a0b60154852fd16c1e2914c321aceca5335c": {
-        "target": "\\Spryker\\Client\\ZedRequest\\ZedRequestDependencyProvider::getHeaderExpanderPlugins",
-        "source": "\\Spryker\\Client\\ZedRequest\\Plugin\\RequestIdHeaderExpanderPlugin"
-      },
-      "8d256de1a92485b82e83fd6a65e6bd90fb6be552": {
-        "target": "\\SprykerShop\\Yves\\WebProfilerWidget\\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins",
-        "source": "\\Spryker\\Yves\\ZedRequest\\Plugin\\WebProfiler\\WebProfilerZedRequestDataCollectorPlugin"
+      "56671df09ee1e20b4fa3b0a5b03b5c7a6be95b01": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\CmsBlockWidget\\Plugin\\Twig\\CmsBlockTwigPlugin",
+        "module": "SprykerShop.CmsBlockWidget",
+        "module-version": "1.2.0"
       }
     }
   },
-  "Spryker.SearchElasticsearch": {
+  "SprykerShop.CmsPage": {
     "wire-plugin": {
-      "41caee6a4f3abe8bdad9c4a55db2aa65980285ae": {
-        "target": "\\SprykerShop\\Yves\\WebProfilerWidget\\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins",
-        "source": "\\Spryker\\Yves\\SearchElasticsearch\\Plugin\\WebProfiler\\WebProfilerElasticsearchDataCollectorPlugin"
+      "807bf623ec151240ebdf7b441debb03eff7d2b5d": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\CmsPage\\Plugin\\Twig\\CmsTwigPlugin",
+        "module": "SprykerShop.CmsPage",
+        "module-version": "1.1.0"
       }
     }
   },
-  "SprykerShop.CartNoteWidget": {
+  "SprykerShop.CmsSlotBlockWidget": {
     "wire-plugin": {
-      "e2ca3da2c2fa22d00ef722aa1792f86012043860": {
-        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getWidgetCacheKeyGeneratorStrategyPlugins",
-        "source": "\\SprykerShop\\Yves\\CartNoteWidget\\Plugin\\ShopApplication\\CartItemNoteFormWidgetCacheKeyGeneratorStrategyPlugin"
+      "1551c2a3db089b3b87aeb724db7ae065ac79b275": {
+        "target": "\\SprykerShop\\Yves\\ShopCmsSlot\\ShopCmsSlotDependencyProvider::getCmsSlotContentPlugins",
+        "source": "\\SprykerShop\\Yves\\CmsSlotBlockWidget\\Plugin\\ShopCmsSlot\\CmsSlotBlockWidgetCmsSlotContentPlugin",
+        "index": "\\Spryker\\Shared\\CmsSlotBlock\\CmsSlotBlockConfig::CMS_SLOT_CONTENT_PROVIDER_TYPE",
+        "module": "SprykerShop.CmsSlotBlockWidget",
+        "module-version": "0.1.0"
       }
     }
   },
-  "SprykerShop.DiscountPromotionWidget": {
+  "SprykerShop.CompanyPage": {
     "wire-plugin": {
-      "55439a9d1ce6a503b81ecabfd1f382f3bc18d646": {
-        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getWidgetCacheKeyGeneratorStrategyPlugins",
-        "source": "\\SprykerShop\\Yves\\DiscountPromotionWidget\\Plugin\\ShopApplication\\CartDiscountPromotionProductListWidgetCacheKeyGeneratorStrategyPlugin"
+      "680badf0aee01f904d451e9f548b684318f1946f": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getAddressStepExecutorAddressExpanderPlugins",
+        "source": "\\SprykerShop\\Yves\\CompanyPage\\Plugin\\CheckoutPage\\CompanyUnitAddressExpanderPlugin",
+        "module": "SprykerShop.CompanyPage",
+        "module-version": "2.7.0"
       }
     }
   },
-  "SprykerShop.QuoteApprovalWidget": {
+  "SprykerShop.CustomerPage": {
     "wire-plugin": {
-      "8afb6a03e4e353c90eeaa44d604ae413af3f1241": {
-        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getWidgetCacheKeyGeneratorStrategyPlugins",
-        "source": "\\SprykerShop\\Yves\\QuoteApprovalWidget\\Plugin\\ShopApplication\\QuoteApprovalStatusWidgetCacheKeyGeneratorStrategyPlugin"
+      "692b4f4c851198030c3751d5eb5fca4e2e3c8bd9": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getAddressStepExecutorAddressExpanderPlugins",
+        "source": "\\SprykerShop\\Yves\\CustomerPage\\Plugin\\CheckoutPage\\CustomerAddressExpanderPlugin",
+        "module": "SprykerShop.CustomerPage",
+        "module-version": "2.0.0"
+      }
+    }
+  },
+  "SprykerShop.MoneyWidget": {
+    "wire-plugin": {
+      "fcf2cde7f745c6a33093f5a7a3a7a5e5269b3f89": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\MoneyWidget\\Plugin\\Twig\\MoneyTwigPlugin",
+        "module": "SprykerShop.MoneyWidget",
+        "module-version": "1.2.0"
+      }
+    }
+  },
+  "SprykerShop.PaymentPage": {
+    "wire-plugin": {
+      "ae9b0cd5725b7b683db73b0286fd4d73b949d3c4": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getPaymentCollectionExtenderPlugins",
+        "source": "\\SprykerShop\\Yves\\PaymentPage\\Plugin\\PaymentPage\\PaymentForeignPaymentCollectionExtenderPlugin",
+        "module": "SprykerShop.PaymentPage",
+        "module-version": "1.0.0"
       },
-      "8bd3c2629ef4578df800ec0832ad7c4b7975c1b6": {
-        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getWidgetCacheKeyGeneratorStrategyPlugins",
-        "source": "\\SprykerShop\\Yves\\QuoteApprovalWidget\\Plugin\\ShopApplication\\QuoteApproveRequestWidgetCacheKeyGeneratorStrategyPlugin"
-      },
-      "dd8d61efe30b52391d18cd673cfe6754326678d4": {
-        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getWidgetCacheKeyGeneratorStrategyPlugins",
-        "source": "\\SprykerShop\\Yves\\QuoteApprovalWidget\\Plugin\\ShopApplication\\QuoteApprovalWidgetCacheKeyGeneratorStrategyPlugin"
+      "92367742438cdf97a54bdbd7624e4218a73e3d85": {
+        "target": "\\Spryker\\Yves\\Router\\RouterDependencyProvider::getRouteProvider",
+        "source": "\\SprykerShop\\Yves\\PaymentPage\\Plugin\\Router\\PaymentPageRouteProviderPlugin",
+        "module": "SprykerShop.PaymentPage",
+        "module-version": "1.0.0"
       }
     }
   },
-  "Spryker.Transfer": {
+  "SprykerShop.ProductCategoryWidget": {
+    "wire-widget": {
+      "baeffc1a5e540adfd73eaff9e5c431167ce00e0f": {
+        "source": "\\SprykerShop\\Yves\\ProductCategoryWidget\\Widget\\ProductSchemaOrgCategoryWidget",
+        "module": "SprykerShop.ProductCategoryWidget",
+        "module-version": "1.6.0"
+      }
+    }
+  },
+  "SprykerShop.QuoteRequestAgentPage": {
+    "wire-plugin": {
+      "948e7a01cfb7b9e1fe1d48103949b5531c0f7c49": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getCheckoutStepResolverStrategyPlugins",
+        "source": "\\SprykerShop\\Yves\\QuoteRequestAgentPage\\Plugin\\CheckoutPage\\QuoteRequestAgentCheckoutWorkflowStepResolverStrategyPlugin",
+        "module": "SprykerShop.QuoteRequestAgentPage",
+        "module-version": "3.0.0"
+      }
+    }
+  },
+  "SprykerShop.QuoteRequestPage": {
+    "wire-plugin": {
+      "4ef26d32777fd36e78db07f1e62734a544d764ff": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getCheckoutStepResolverStrategyPlugins",
+        "source": "\\SprykerShop\\Yves\\QuoteRequestPage\\Plugin\\CheckoutPage\\QuoteRequestCheckoutWorkflowStepResolverStrategyPlugin",
+        "module": "SprykerShop.QuoteRequestPage",
+        "module-version": "3.0.0"
+      },
+      "cc2f22a5b94fab0696516c1d25dba41a728ad63c": {
+        "target": "\\SprykerShop\\Yves\\CheckoutPage\\CheckoutPageDependencyProvider::getCheckoutStepResolverStrategyPlugins",
+        "source": "\\SprykerShop\\Yves\\QuoteRequestPage\\Plugin\\CheckoutPage\\QuoteWithCustomShipmentPriceCheckoutWorkflowStepResolverStrategyPlugin",
+        "module": "SprykerShop.QuoteRequestPage",
+        "module-version": "3.0.0"
+      }
+    }
+  },
+  "SprykerShop.ShopApplication": {
+    "wire-plugin": {
+      "1373b78f6fba2bb11a2da864f07d6432534613d3": {
+        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getApplicationPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\Application\\ShopApplicationApplicationPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "4d69a46f6b69c6f6971fe4e2549284aef6d9304a": {
+        "target": "\\Spryker\\Yves\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\EventDispatcher\\ShopApplicationEventDispatcherPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "bc7dcd7118776c9c85a25a0d2b3f5ba67ed1baaf": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\Twig\\ShopApplicationTwigPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "c160378cbf64ec18a26199e9ff9f2155eba55e88": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\TwigFormRuntimeLoaderPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "3842cd69b0a05b5f5f757bef66622a23285ac1ff": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\Twig\\WidgetTwigPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "6a01fbb03c775d85b10ff7cb53a3be8ef6f5b58e": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\Twig\\WidgetTagTwigPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      },
+      "b1b097d24e2b3566f13d7d30835bc1c4aa22e2f4": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopApplication\\Plugin\\Twig\\ShopApplicationFormTwigLoaderPlugin",
+        "module": "SprykerShop.ShopApplication",
+        "module-version": "1.5.0"
+      }
+    }
+  },
+  "SprykerShop.ShopPermission": {
+    "wire-plugin": {
+      "b18348e17472970da0f67f4e0783e42a8908f4eb": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopPermission\\Plugin\\Twig\\ShopPermissionTwigPlugin",
+        "module": "SprykerShop.ShopPermission",
+        "module-version": "1.2.0"
+      }
+    }
+  },
+  "SprykerShop.ShopUi": {
+    "wire-plugin": {
+      "6827bae724f830846cbd349a4f78022cb6b7d8c9": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\SprykerShop\\Yves\\ShopUi\\Plugin\\Twig\\ShopUiTwigPlugin",
+        "module": "SprykerShop.ShopUi",
+        "module-version": "1.16.0"
+      }
+    }
+  },
+  "Spryker.AgentAuthRestApi": {
+    "wire-plugin": {
+      "2780321aaf624a2f08c4da5a064f110309386e4c": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getResourceRoutePlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentAccessTokensResourceRoutePlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "1f72e6b47de2207d3cf95a8e2434cc2b3081c833": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getResourceRoutePlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentCustomerImpersonationAccessTokensResourceRoutePlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "9b64d53d3acc299902c391c4d261c87b43fa2131": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getResourceRoutePlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentCustomerSearchResourceRoutePlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "f68bed7e9b6e96e74c475972b1ab0a5813a8187d": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getRestRequestValidatorPlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentAccessTokenRestRequestValidatorPlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "e6eefafaca56fe03278809952b723bf78bf7198b": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getRestUserValidatorPlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentRestUserValidatorPlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "f73b63ef4ece22554b2e7aaf526d3a9374a06e3e": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getRestUserFinderPlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\GlueApplication\\AgentAccessTokenRestUserFinderPlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      },
+      "b20e80f9ce63276c3212db32096856796cbba64e": {
+        "target": "\\Spryker\\Glue\\AuthRestApi\\AuthRestApiDependencyProvider::getRestUserExpanderPlugins",
+        "source": "\\Spryker\\Glue\\AgentAuthRestApi\\Plugin\\AuthRestApi\\AgentRestUserMapperPlugin",
+        "module": "Spryker.AgentAuthRestApi",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.AppCatalogGui": {
+    "configure-env": {
+      "420e9035d8cea76aa6d9afbe518129b811f6fb1b": {
+        "target": "\\Spryker\\Shared\\AppCatalogGui\\AppCatalogGuiConstants::OAUTH_PROVIDER_NAME",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::PROVIDER_NAME",
+        "module": "Spryker.AppCatalogGui",
+        "module-version": "1.0.0"
+      },
+      "a0752602c7cfd497b496aebd631af8103082771d": {
+        "target": "\\Spryker\\Shared\\AppCatalogGui\\AppCatalogGuiConstants::OAUTH_GRANT_TYPE",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS",
+        "module": "Spryker.AppCatalogGui",
+        "module-version": "1.0.0"
+      },
+      "514b5d74732a08dedf53f51010b2b362e566752e": {
+        "target": "\\Spryker\\Shared\\AppCatalogGui\\AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE",
+        "value": "aop-atrs",
+        "module": "Spryker.AppCatalogGui",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.Application": {
+    "wire-plugin": {
+      "5870fc171fc006f47ffd1b42824b458fc3c78289": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\Application\\Communication\\Plugin\\Twig\\ApplicationTwigPlugin",
+        "module": "Spryker.Application",
+        "module-version": "3.15.0"
+      }
+    }
+  },
+  "Spryker.Asset": {
+    "wire-plugin": {
+      "82de10767c5a000b7e0daaf28ab2bf80e2ffbd1c": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Asset\\Communication\\Plugin\\MessageBroker\\AssetAddedMessageHandlerPlugin",
+        "module": "Spryker.Asset",
+        "module-version": "1.0.0"
+      },
+      "d1eed64d80facdd8c2fb6db80cfe3a5c5a473a59": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Asset\\Communication\\Plugin\\MessageBroker\\AssetUpdatedMessageHandlerPlugin",
+        "module": "Spryker.Asset",
+        "module-version": "1.0.0"
+      },
+      "34b50c1b3d93b091f02735120b75090c3f990162": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Asset\\Communication\\Plugin\\MessageBroker\\AssetDeletedMessageHandlerPlugin",
+        "module": "Spryker.Asset",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.AssetStorage": {
+    "add-config-array-element": {
+      "df74c28a43d9862f7819246ccaac9b25086eafac": {
+        "target": "\\Spryker\\Client\\RabbitMq\\RabbitMqConfig::getSynchronizationQueueConfiguration",
+        "value": "\\Spryker\\Shared\\AssetStorage\\AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE",
+        "module": "Spryker.AssetStorage",
+        "module-version": "1.0.0"
+      }
+    },
+    "wire-plugin": {
+      "3bdbd97a711f81523b1b0b6cbb6249cce76f9dd7": {
+        "target": "\\Spryker\\Zed\\Event\\EventDependencyProvider::getEventSubscriberCollection",
+        "source": "\\Spryker\\Zed\\AssetStorage\\Communication\\Plugin\\Event\\Subscriber\\AssetStorageEventSubscriber",
+        "module": "Spryker.AssetStorage",
+        "module-version": "1.0.0"
+      },
+      "0f4f6fa751c162897f7a4d4f6c01a1235248577e": {
+        "target": "\\Spryker\\Zed\\Queue\\QueueDependencyProvider::getProcessorMessagePlugins",
+        "source": "\\Spryker\\Zed\\Synchronization\\Communication\\Plugin\\Queue\\SynchronizationStorageQueueMessageProcessorPlugin",
+        "index": "\\Spryker\\Shared\\AssetStorage\\AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE",
+        "module": "Spryker.AssetStorage",
+        "module-version": "1.0.0"
+      },
+      "00b92c34b6f02d2222368dca1253bdbaf98dbfc8": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\AssetStorage\\Communication\\Plugin\\Synchronization\\AssetStorageSynchronizationDataPlugin",
+        "module": "Spryker.AssetStorage",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.Availability": {
+    "wire-plugin": {
+      "6b846cbfb04c47c4301177140fd5f3b771f76160": {
+        "target": "\\Spryker\\Zed\\Stock\\StockDependencyProvider::getStockUpdateHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Availability\\Communication\\Plugin\\Stock\\AvailabilityStockUpdateHandlerPlugin",
+        "module": "Spryker.Availability",
+        "module-version": "9.12.0"
+      }
+    }
+  },
+  "Spryker.AvailabilityCartConnector": {
+    "wire-plugin": {
+      "a6275c9eda659df65aac83955b41e93abaa8cadb": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getCartPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\AvailabilityCartConnector\\Communication\\Plugin\\Cart\\CheckAvailabilityPlugin",
+        "module": "Spryker.AvailabilityCartConnector",
+        "module-version": "7.3.0"
+      }
+    }
+  },
+  "Spryker.AvailabilityStorage": {
+    "wire-plugin": {
+      "3bc94fb1dfa548794f8a4f15bd070bc96ccb4831": {
+        "target": "\\Spryker\\Client\\ProductAlternativeStorage\\ProductAlternativeStorageDependencyProvider::getAlternativeProductApplicableCheckPlugins",
+        "source": "\\Spryker\\Client\\AvailabilityStorage\\Plugin\\ProductAlternativeStorage\\AvailabilityCheckAlternativeProductApplicablePlugin",
+        "module": "Spryker.AvailabilityStorage",
+        "module-version": "1.1.0"
+      }
+    }
+  },
+  "Spryker.CartNote": {
+    "wire-plugin": {
+      "2271499a7754222a1d9de7750d9bdf4c5f4ba87c": {
+        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
+        "source": "\\Spryker\\Zed\\CartNote\\Communication\\Plugin\\Checkout\\CartNoteSaverPlugin",
+        "module": "Spryker.CartNote",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CartNoteProductBundleConnector": {
+    "wire-plugin": {
+      "386f5f6051acbc05d6f3464c7a067c1f96de5f32": {
+        "target": "\\Spryker\\Client\\CartNote\\CartNoteDependencyProvider::getQuoteItemsFinderPlugin",
+        "source": "\\Spryker\\Client\\CartNoteProductBundleConnector\\Plugin\\BundleProductQuoteItemFinderPlugin",
+        "module": "Spryker.CartNoteProductBundleConnector",
+        "module-version": "0.1.0"
+      },
+      "7cc0dfd3885c3a9208533d5d34e6e961499ba274": {
+        "target": "\\Spryker\\Zed\\CartNote\\CartNoteDependencyProvider::getQuoteItemsFinderPlugin",
+        "source": "\\Spryker\\Zed\\CartNoteProductBundleConnector\\Communication\\Plugin\\BundleProductQuoteItemFinderPlugin",
+        "module": "Spryker.CartNoteProductBundleConnector",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CartPermissionGroupsRestApi": {
+    "wire-glue-relationship": {
+      "aedb7ddf4f54e134b4f76c0f1992739e044938d5": {
+        "source": {
+          "\\Spryker\\Glue\\SharedCartsRestApi\\SharedCartsRestApiConfig::RESOURCE_SHARED_CARTS": "\\Spryker\\Glue\\CartPermissionGroupsRestApi\\Plugin\\GlueApplication\\CartPermissionGroupByShareDetailResourceRelationshipPlugin"
+        },
+        "module": "Spryker.CartPermissionGroupsRestApi",
+        "module-version": "1.2.0"
+      }
+    }
+  },
+  "Spryker.Category": {
+    "configure-env": {
+      "6c6ce3074276ab0416795929f46dd4abb671789f": {
+        "target": "\\Spryker\\Shared\\Category\\CategoryConstants::CATEGORY_READ_CHUNK",
+        "value": 10000,
+        "module": "Spryker.Category",
+        "module-version": "5.2.0"
+      },
+      "a4e86a26a34d10aeccf432c482f205fd710be3f6": {
+        "target": "\\Spryker\\Shared\\Category\\CategoryConstants::CATEGORY_IS_CLOSURE_TABLE_EVENTS_ENABLED",
+        "value": false,
+        "module": "Spryker.Category",
+        "module-version": "5.2.0"
+      }
+    }
+  },
+  "Spryker.CategoryDataImport": {
+    "wire-plugin": {
+      "0416cdaf5b6940ff3c2d19b79433bf4ea850629c": {
+        "target": "\\Spryker\\Zed\\DataImport\\DataImportDependencyProvider::getDataImporterPlugins",
+        "source": "\\Spryker\\Zed\\CategoryDataImport\\Communication\\Plugin\\DataImport\\CategoryStoreDataImportPlugin",
+        "module": "Spryker.CategoryDataImport",
+        "module-version": "0.3.0"
+      }
+    }
+  },
+  "Spryker.CategoryImageGui": {
+    "wire-plugin": {
+      "70d3b4aef08045415b0148b9d3063865c1001f62": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getCategoryFormTabExpanderPlugins",
+        "source": "\\Spryker\\Zed\\CategoryImageGui\\Communication\\Plugin\\CategoryGui\\ImageSetCategoryFormTabExpanderPlugin",
+        "module": "Spryker.CategoryImageGui",
+        "module-version": "1.3.0"
+      },
+      "85c63bcbb06f520711f956025ba11dcc608bd6ef": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getCategoryFormPlugins",
+        "source": "\\Spryker\\Zed\\CategoryImageGui\\Communication\\Plugin\\CategoryGui\\ImageSetSubformCategoryFormPlugin",
+        "module": "Spryker.CategoryImageGui",
+        "module-version": "1.3.0"
+      }
+    }
+  },
+  "Spryker.CategoryImageStorage": {
+    "wire-plugin": {
+      "6789a0c36d6c284eb4b5434fe992957c7bc47844": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryImageStorage\\Communication\\Plugin\\Synchronization\\CategoryImageSynchronizationDataBulkPlugin",
+        "module": "Spryker.CategoryImageStorage",
+        "module-version": "1.2.0"
+      }
+    }
+  },
+  "Spryker.CategoryPageSearch": {
+    "unwire-plugin": {
+      "f4c72e0ef0fc33c690f33ee1e6b7218f946a9e8d": {
+        "target": "\\Spryker\\Zed\\Event\\EventDependencyProvider::getEventSubscriberCollection",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Event\\Subscriber\\CategoryPageSearchEventSubscriber",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "d3ece7af0a9185fdb129d3729277bfa23ca22c97": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Event\\CategoryPageEventResourceQueryContainerPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "ff4019efbafc69210d1f717505dd819e1d325ffb": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Synchronization\\CategoryPageSynchronizationDataPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      }
+    },
+    "wire-plugin": {
+      "f4f2cd7b4c5fc5c72a56affadf10f9f31fcefc6c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getPublisherTriggerPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryPagePublisherTriggerPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "44fa68e3b4d5c928a68eaded69540b3acaa4995b": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\Category\\CategoryDeletePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "6104d572f746ee40085c9337cd247eb919edc7ec": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\Category\\CategoryWritePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "b752ec347fce9dc2bcb3b88a61f494f83ed118d2": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeDeletePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "50008bd2d0151c5815556679eb093052626da25a": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeWritePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "d04fc16f6dfe4c38f5a5483f221897f7b9d91ea4": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryNode\\CategoryNodeDeletePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "8b12309188d7baaff5e06c4ffc968b202950ee67": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryNode\\CategoryNodeWritePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "40617686d6b4dc8da708b15d20eecaeadc627e93": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryTemplate\\CategoryTemplateDeletePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "f9daee07f3b814285fc4a33a9d27f6f261543c36": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryPageSearchPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Publisher\\CategoryTemplate\\CategoryTemplateWritePublisherPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      },
+      "ecbebfd8c3ecf8c7a30ddd8d2e92a61558fa76a5": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryPageSearch\\Communication\\Plugin\\Synchronization\\CategoryPageSynchronizationDataBulkRepositoryPlugin",
+        "module": "Spryker.CategoryPageSearch",
+        "module-version": "2.1.0"
+      }
+    }
+  },
+  "Spryker.CategoryStorage": {
+    "unwire-plugin": {
+      "5d7600c050e1e09c1a39cee5b98e469d3c2f6039": {
+        "target": "\\Spryker\\Zed\\Event\\EventDependencyProvider::getEventSubscriberCollection",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Event\\Subscriber\\CategoryStorageEventSubscriber",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "f56a4a4c24203b13ea4446747a68270b0660cdb6": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Event\\CategoryTreeEventResourceQueryContainerPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "725c25e303b817230594023b0a6c5fe0209317e0": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Event\\CategoryNodeEventResourceQueryContainerPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "b290eaa3f5f36294f406629b72a37bd5c5fd2f5b": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTree\\CategoryTreeWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "864a1188d91789d9a85eaa7990849860c9dddb90": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Synchronization\\CategoryTreeSynchronizationDataPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "a53e3b481c18d037b414156b9e49d55c7504eee3": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Synchronization\\CategoryNodeSynchronizationDataPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      }
+    },
+    "wire-plugin": {
+      "b898ad539c70123815e3deec8260490e07a133c7": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getPublisherTriggerPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryNodePublisherTriggerPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "58068a0f5b1a6fd095621bb0e74bd08c092bae71": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getPublisherTriggerPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTreePublisherTriggerPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "496e83db41f9a6d4ee3adea087d36b84d5a3890c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTree\\CategoryTreeWriteForPublishingPublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "c9a8b1621ef4a30c4fd19b219009280c45f48b6c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\Category\\CategoryDeletePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "109b094b3948bf8c9d82568dc6bf326a8eb3eb9c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\Category\\CategoryWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "ca943ef49af8a933af9e727f7fe6356bff980485": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeDeletePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "1da4f38d653f2ea4cf49288b2294cfc8ee29214c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "e447d93dd7009c3ecca3ef832b7f2936594b02bf": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryNode\\CategoryNodeDeletePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "5aba6390e8235026f3c64c57b89cd2d5d05c2399": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryNode\\CategoryNodeWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "13ce3a2e8a2b7c7139adae13d225fa581fdffd7e": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTemplate\\CategoryTemplateDeletePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "ab2e36901446fb2668c4e69e90159a3798a917e5": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTemplate\\CategoryTemplateWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "b2ba3a4efe5bfa1bc81821a6c5a47b68917f6e30": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\CategoryTree\\CategoryTreeDeletePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "24ceeff1e36e6da1d7e044437084d1d4276e4e71": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Publisher\\ParentWritePublisherPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "3966de0c978bebdf4a516261d74113fa169413e2": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Synchronization\\CategoryTreeSynchronizationDataBulkRepositoryPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      },
+      "7cfbd5a8962640d2ab9507b2771e7789c47106e5": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CategoryStorage\\Communication\\Plugin\\Synchronization\\CategoryNodeSynchronizationDataBulkRepositoryPlugin",
+        "module": "Spryker.CategoryStorage",
+        "module-version": "2.1.0"
+      }
+    }
+  },
+  "Spryker.CmsBlockCategoryConnector": {
+    "wire-plugin": {
+      "eade19e66189fadc585280053164b15cb2f9414c": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getCategoryFormPlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockCategoryConnector\\Communication\\Plugin\\CategoryGui\\CmsBlockSubformCategoryFormPlugin",
+        "module": "Spryker.CmsBlockCategoryConnector",
+        "module-version": "2.4.0"
+      },
+      "1494dddf0f041a7eefb38024b20163458187db25": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getCategoryRelationReadPlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockCategoryConnector\\Communication\\Plugin\\CategoryGui\\CmsBlockCategoryRelationReadPlugin",
+        "module": "Spryker.CmsBlockCategoryConnector",
+        "module-version": "2.4.0"
+      }
+    }
+  },
+  "Spryker.CmsBlockCategoryStorage": {
+    "wire-plugin": {
+      "3cea7ace79073009869d75a49898966ee1d50d09": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockCategoryStorage\\Communication\\Plugin\\Synchronization\\CmsBlockCategorySynchronizationDataPlugin",
+        "module": "Spryker.CmsBlockCategoryStorage",
+        "module-version": "1.0.1"
+      },
+      "979da75c5ebb0279cbb6e9da732efb1d7d9b918e": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockCategoryStorage\\Communication\\Plugin\\Event\\CmsBlockCategoryEventResourceQueryContainerPlugin",
+        "module": "Spryker.CmsBlockCategoryStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.CmsBlockProductStorage": {
+    "wire-plugin": {
+      "93731f39754c7828db96ee3b201d83441e374ba7": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockProductStorage\\Communication\\Plugin\\Synchronization\\CmsBlockProductSynchronizationDataPlugin",
+        "module": "Spryker.CmsBlockProductStorage",
+        "module-version": "1.0.1"
+      },
+      "2f747a6846068d33b5cee88c8dcdb4289a326fa1": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockProductStorage\\Communication\\Plugin\\Event\\CmsBlockProductEventResourceQueryContainerPlugin",
+        "module": "Spryker.CmsBlockProductStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.CmsBlockStorage": {
+    "wire-plugin": {
+      "618350d932a9f062160f97db1dc66beb0e0cf34e": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockStorage\\Communication\\Plugin\\Synchronization\\CmsBlockSynchronizationDataPlugin",
+        "module": "Spryker.CmsBlockStorage",
+        "module-version": "1.0.1"
+      },
+      "3e9c7c2f4e9d280acd9cfc99e5d2cfd73adbc8ee": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsBlockStorage\\Communication\\Plugin\\Event\\CmsBlockEventResourceQueryContainerPlugin",
+        "module": "Spryker.CmsBlockStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.CmsContentWidget": {
+    "wire-plugin": {
+      "5450421bb8025d05856b65a4a5eb0d135e221b95": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Yves\\CmsContentWidget\\Plugin\\Twig\\CmsContentWidgetTwigPlugin",
+        "module": "Spryker.CmsContentWidget",
+        "module-version": "1.5.0"
+      }
+    }
+  },
+  "Spryker.CmsPageSearch": {
+    "wire-plugin": {
+      "525b832fee30e5c03cbafb35978295a9abbc04c9": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsPageSearch\\Communication\\Plugin\\Synchronization\\CmsPageSynchronizationDataPlugin",
+        "module": "Spryker.CmsPageSearch",
+        "module-version": "1.0.1"
+      },
+      "276e01baedb01245035e96a3422adca277d44de9": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsPageSearch\\Communication\\Plugin\\Event\\CmsPageEventResourceQueryContainerPlugin",
+        "module": "Spryker.CmsPageSearch",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockCategoryConnector": {
+    "wire-plugin": {
+      "e47765c3b3a81d80622f56537ba425dabed8e73a": {
+        "target": "\\Spryker\\Client\\CmsSlotBlock\\CmsSlotBlockDependencyProvider::getCmsSlotBlockVisibilityResolverPlugins",
+        "source": "\\Spryker\\Client\\CmsSlotBlockCategoryConnector\\Plugin\\CmsSlotBlock\\CategoryCmsSlotBlockConditionResolverPlugin",
+        "module": "Spryker.CmsSlotBlockCategoryConnector",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockCategoryGui": {
+    "wire-plugin": {
+      "1aa805c05f412c84a518b53b3d9dc644533fd96c": {
+        "target": "\\Spryker\\Zed\\CmsSlotBlockGui\\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockCategoryGui\\Communication\\Plugin\\CategorySlotBlockConditionFormPlugin",
+        "module": "Spryker.CmsSlotBlockCategoryGui",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockCmsConnector": {
+    "wire-plugin": {
+      "864d3aed33710feb9b2559227cf514790bbd6878": {
+        "target": "\\Spryker\\Client\\CmsSlotBlock\\CmsSlotBlockDependencyProvider::getCmsSlotBlockVisibilityResolverPlugins",
+        "source": "\\Spryker\\Client\\CmsSlotBlockCmsConnector\\Plugin\\CmsSlotBlock\\CmsPageCmsSlotBlockConditionResolverPlugin",
+        "module": "Spryker.CmsSlotBlockCmsConnector",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockCmsGui": {
+    "wire-plugin": {
+      "18dda788972d75f20d5455cfdfe69c6aba7790bb": {
+        "target": "\\Spryker\\Zed\\CmsSlotBlockGui\\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockCmsGui\\Communication\\Plugin\\CmsPageSlotBlockConditionFormPlugin",
+        "module": "Spryker.CmsSlotBlockCmsGui",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockDataImport": {
+    "wire-plugin": {
+      "31b5d2618fbaafd19130794746a909c2512fbf6e": {
+        "target": "\\Spryker\\Zed\\DataImport\\DataImportDependencyProvider::getDataImporterPlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockDataImport\\Communication\\Plugin\\CmsSlotBlockDataImportPlugin",
+        "module": "Spryker.CmsSlotBlockDataImport",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockProductCategoryConnector": {
+    "wire-plugin": {
+      "409722524e8a6737cfe1ceaf8523d5d3884bd4b7": {
+        "target": "\\Spryker\\Client\\CmsSlotBlock\\CmsSlotBlockDependencyProvider::getCmsSlotBlockVisibilityResolverPlugins",
+        "source": "\\Spryker\\Client\\CmsSlotBlockProductCategoryConnector\\Plugin\\CmsSlotBlock\\ProductCategoryCmsSlotBlockConditionResolverPlugin",
+        "module": "Spryker.CmsSlotBlockProductCategoryConnector",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockProductCategoryGui": {
+    "wire-plugin": {
+      "16b88d34cbafa323059830b89a1fa6649f189086": {
+        "target": "\\Spryker\\Zed\\CmsSlotBlockGui\\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockProductCategoryGui\\Communication\\Plugin\\ProductCategorySlotBlockConditionFormPlugin",
+        "module": "Spryker.CmsSlotBlockProductCategoryGui",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsSlotBlockStorage": {
+    "wire-plugin": {
+      "23042bda6010f92f03952e8361b6ad6f64ab0654": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockStorage\\Communication\\Plugin\\Synchronization\\CmsSlotBlockSynchronizationDataBulkPlugin",
+        "module": "Spryker.CmsSlotBlockStorage",
+        "module-version": "0.1.0"
+      },
+      "c6dcf5c00ccbf43dba42be877bf74c90c24eb85f": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsSlotBlockStorage\\Communication\\Plugin\\EventBehavior\\CmsSlotBlockEventResourceBulkRepositoryPlugin",
+        "module": "Spryker.CmsSlotBlockStorage",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.CmsStorage": {
+    "wire-plugin": {
+      "5db906ff0fb6c5716996944bb4801f642825275a": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\CmsStorage\\Communication\\Plugin\\Synchronization\\CmsSynchronizationDataPlugin",
+        "module": "Spryker.CmsStorage",
+        "module-version": "1.0.1"
+      },
+      "6becbb13186a87a8665775f45b6dff5d42311563": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CmsStorage\\Communication\\Plugin\\Event\\CmsEventResourceQueryContainerPlugin",
+        "module": "Spryker.CmsStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.CompanyUser": {
+    "wire-plugin": {
+      "6a1831ad9531a27101459d558bada39c67113fa2": {
+        "target": "\\Spryker\\Zed\\Customer\\CustomerDependencyProvider::getCustomerTransferExpanderPlugins",
+        "source": "\\Spryker\\Zed\\CompanyUser\\Communication\\Plugin\\Customer\\IsActiveCompanyUserExistsCustomerTransferExpanderPlugin",
+        "module": "Spryker.CompanyUser",
+        "module-version": "2.15.0"
+      }
+    }
+  },
+  "Spryker.CompanyUserAuthRestApi": {
+    "wire-plugin": {
+      "47c951db79a293cb79352eb862d3f7189157e444": {
+        "target": "\\Spryker\\Glue\\AuthRestApi\\AuthRestApiDependencyProvider::getRestUserExpanderPlugins",
+        "source": "\\Spryker\\Glue\\CompanyUserAuthRestApi\\Plugin\\AuthRestApi\\CompanyUserRestUserMapperPlugin",
+        "module": "Spryker.CompanyUserAuthRestApi",
+        "module-version": "2.0.0"
+      }
+    }
+  },
+  "Spryker.CompanyUserStorage": {
+    "wire-plugin": {
+      "6d6747e94e32c843f70d20627ff7f6f5dc00f2a2": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\CompanyUserStorage\\Communication\\Plugin\\Event\\CompanyUserEventResourceBulkRepositoryPlugin",
+        "module": "Spryker.CompanyUserStorage",
+        "module-version": "1.3.0"
+      }
+    }
+  },
+  "Spryker.CompanyUsersRestApi": {
+    "wire-glue-relationship": {
+      "fcdf0f9a0f49941cd681ec40de6111060cc636e9": {
+        "source": {
+          "\\Spryker\\Glue\\SharedCartsRestApi\\SharedCartsRestApiConfig::RESOURCE_SHARED_CARTS": "\\Spryker\\Glue\\CompanyUsersRestApi\\Plugin\\GlueApplication\\CompanyUserByShareDetailResourceRelationshipPlugin"
+        },
+        "module": "Spryker.CompanyUsersRestApi",
+        "module-version": "2.1.0"
+      }
+    }
+  },
+  "Spryker.ContentStorage": {
+    "wire-plugin": {
+      "ad570d6ec8a07c7d5d39402a442fd6018a7aaca3": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ContentStorage\\Communication\\Plugin\\Event\\ContentStorageEventResourceBulkRepositoryPlugin",
+        "module": "Spryker.ContentStorage",
+        "module-version": "2.2.0"
+      }
+    }
+  },
+  "Spryker.Currency": {
+    "wire-plugin": {
+      "c396a18448b4e80104337669f72c4753f6790883": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Currency\\Communication\\Plugin\\Quote\\QuoteCurrencyValidatorPlugin",
+        "module": "Spryker.Currency",
+        "module-version": "3.7.0"
+      }
+    }
+  },
+  "Spryker.Customer": {
+    "wire-plugin": {
+      "db6b2aec074504d76916e9ebe5800a18e502d258": {
+        "target": "\\Spryker\\Client\\Authorization\\AuthorizationDependencyProvider::getAuthorizationStrategyPlugins",
+        "source": "\\Spryker\\Client\\Customer\\Plugin\\Authorization\\CustomerReferenceMatchingEntityIdAuthorizationStrategyPlugin",
+        "module": "Spryker.Customer",
+        "module-version": "7.37.0"
+      },
+      "6e4ef85890666b618af19c53ac162d5864b779c0": {
+        "target": "\\Spryker\\Zed\\TaxProductConnector\\TaxProductConnectorDependencyProvider::getShippingAddressValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Customer\\Communication\\Plugin\\TaxProductConnector\\CustomerAddressShippingAddressValidatorPlugin",
+        "module": "Spryker.Customer",
+        "module-version": "7.47.0"
+      }
+    }
+  },
+  "Spryker.Discount": {
+    "wire-plugin": {
+      "c3a89fbc80888873975a01ec2cdd1fdfd771503c": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getQuoteChangeObserverPlugins",
+        "source": "\\Spryker\\Zed\\Discount\\Communication\\Plugin\\Cart\\DiscountQuoteChangeObserverPlugin",
+        "module": "Spryker.Discount",
+        "module-version": "6.2.0"
+      }
+    },
     "configure-module": {
-      "0d14aec930d64e6c92cfd4e6b2541cbaf60b598a": {
-        "target": "\\Spryker\\Zed\\Transfer\\TransferConfig::isTransferXmlValidationEnabled",
-        "default": "true"
+      "235c45e87068e8b7a1c7a6987ea054c6bc2df868": {
+        "target": "\\Spryker\\Zed\\Discount\\DiscountConfig::IS_MONEY_COLLECTION_FORM_TYPE_PLUGIN_ENABLED",
+        "value": true,
+        "module": "Spryker.Discount",
+        "module-version": "9.28.0"
       }
     }
   },
-  "Spryker.CompanyGui": {
+  "Spryker.DiscountPromotion": {
     "wire-plugin": {
-      "f26e648ae3101b9f26e9bcaf321a679ba1dc67ec": {
-        "target": "\\Spryker\\Zed\\CompanyUserGui\\CompanyUserGuiDependencyProvider::getCompanyUserFormExpanderPlugins",
-        "source": "\\Spryker\\Zed\\CompanyGui\\Communication\\Plugin\\CompanyUserGui\\CompanyToCompanyUserFormExpanderPlugin"
+      "94e6d10d5745c24c39249d692ab5ae0491b02860": {
+        "target": "\\Spryker\\Client\\Cart\\CartDependencyProvider::getAddItemsRequestExpanderPlugins",
+        "source": "\\Spryker\\Client\\DiscountPromotion\\Plugin\\AddDiscountPromotionCartRequestExpandPlugin",
+        "module": "Spryker.DiscountPromotion",
+        "module-version": "1.1.0"
       }
     }
   },
-  "Spryker.PublishAndSynchronizeHealthCheck": {
+  "Spryker.EventDispatcher": {
     "wire-plugin": {
-      "e9ceb2499ca9e36e07e6f941db5b84e63a9db5ba": {
-        "target": "\\Spryker\\Zed\\HealthCheck\\HealthCheckDependencyProvider::getHealthCheckPlugins",
-        "source": "\\Spryker\\Zed\\PublishAndSynchronizeHealthCheck\\Communication\\Plugin\\HealthCheck\\PublishAndSynchronizeWriteHealthCheckPlugin"
+      "9458c3eee96c1e9efec807f1ac01211c7a66bc95": {
+        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getApplicationPlugins",
+        "source": "\\Spryker\\Yves\\EventDispatcher\\Plugin\\Application\\EventDispatcherApplicationPlugin",
+        "module": "Spryker.EventDispatcher",
+        "module-version": "1.0.0"
+      },
+      "e16e17dcc234ab82302f020de1f88b505b73df44": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackofficeApplicationPlugins",
+        "source": "\\Spryker\\Zed\\EventDispatcher\\Communication\\Plugin\\Application\\EventDispatcherApplicationPlugin",
+        "module": "Spryker.EventDispatcher",
+        "module-version": "1.0.0"
+      },
+      "beb8d43ea5b007e7051019f7b908e862a85c0aa8": {
+        "target": "\\Spryker\\Zed\\MerchantPortalApplication\\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins",
+        "source": "\\Spryker\\Zed\\EventDispatcher\\Communication\\Plugin\\Application\\EventDispatcherApplicationPlugin",
+        "module": "Spryker.EventDispatcher",
+        "module-version": "1.0.0"
       }
     }
   },
-  "Spryker.PublishAndSynchronizeHealthCheckSearch": {
+  "Spryker.GlueApplication": {
     "wire-plugin": {
-      "166c3677c8d02106e261c4cdf3848270bf911f6a": {
-        "target": "\\Spryker\\Zed\\HealthCheck\\HealthCheckDependencyProvider::getHealthCheckPlugins",
-        "source": "\\Spryker\\Zed\\PublishAndSynchronizeHealthCheckSearch\\Communication\\Plugin\\HealthCheck\\PublishAndSynchronizeHealthCheckSearchPlugin"
+      "41bbf4846b30b48cf0c7e74d6402de7081861514": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getGlueApplicationBootstrapPlugins",
+        "source": "\\Spryker\\Glue\\GlueApplication\\Plugin\\GlueApplication\\FallbackStorefrontApiGlueApplicationBootstrapPlugin",
+        "module": "Spryker.GlueApplication",
+        "module-version": "1.37.0"
+      },
+      "b2e679b73fbc8b446266f1e030319ed32f8a3969": {
+        "target": "\\Spryker\\Glue\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Glue\\GlueApplication\\Plugin\\Console\\RouterCacheWarmUpConsole",
+        "module": "Spryker.GlueApplication",
+        "module-version": "1.42.0"
       }
     }
   },
-  "Spryker.PublishAndSynchronizeHealthCheckStorage": {
+  "Spryker.GlueBackendApiApplication": {
+    "configure-env": {
+      "1aaeb0648b85326463e61e3a7b8769415e1bf38f": {
+        "target": "\\Spryker\\Shared\\GlueBackendApiApplication\\GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST",
+        "value": {
+          "value": "getenv('SPRYKER_GLUE_BACKEND_HOST')",
+          "is_literal": true
+        },
+        "module": "Spryker.GlueBackendApiApplication",
+        "module-version": "0.1.0"
+      }
+    },
     "wire-plugin": {
-      "f700d7c24e14e077a9fd6c6006f74a08b9f96e01": {
-        "target": "\\Spryker\\Zed\\HealthCheck\\HealthCheckDependencyProvider::getHealthCheckPlugins",
-        "source": "\\Spryker\\Zed\\PublishAndSynchronizeHealthCheckStorage\\Communication\\Plugin\\HealthCheck\\PublishAndSynchronizeHealthCheckStoragePlugin"
+      "8de0046352a96307e1e0a04bdedc2f80bc5c753a": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getGlueApplicationBootstrapPlugins",
+        "source": "\\Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication\\BackendApiGlueApplicationBootstrapPlugin",
+        "module": "Spryker.GlueBackendApiApplication",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.GlueHttp": {
+    "wire-plugin": {
+      "d3ba5a86e4929bb63ef49d7b3fc815bb4ba5814b": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getGlueContextExpanderPlugins",
+        "source": "\\Spryker\\Glue\\GlueHttp\\Plugin\\GlueContext\\HttpGlueContextExpanderPlugin",
+        "module": "Spryker.GlueHttp",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.GlueStorefrontApiApplication": {
+    "configure-env": {
+      "1a03504ab8c85cf289cdaf4b18d0b6b3b31f9c1b": {
+        "target": "\\Spryker\\Shared\\GlueStorefrontApiApplication\\GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST",
+        "value": {
+          "value": "getenv('SPRYKER_GLUE_STOREFRONT_HOST')",
+          "is_literal": true
+        },
+        "module": "Spryker.GlueStorefrontApiApplication",
+        "module-version": "0.1.0"
+      }
+    },
+    "wire-plugin": {
+      "68f0ebd49a9c4b792a6977afa97a2c34a528a9ec": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getGlueApplicationBootstrapPlugins",
+        "source": "\\Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\StorefrontApiGlueApplicationBootstrapPlugin",
+        "module": "Spryker.GlueStorefrontApiApplication",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.Gui": {
+    "wire-plugin": {
+      "0b8ec8fe8aa6afcfad55b054c7dc9cbf42d8ebc7": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\Gui\\Communication\\Plugin\\Twig\\FormRuntimeLoaderTwigPlugin",
+        "module": "Spryker.Gui",
+        "module-version": "3.19.0"
+      },
+      "488e6a69e6e0bf4fcf391eb3fa43a6eaf3ae184d": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\Spryker\\Zed\\Gui\\Communication\\Plugin\\Twig\\GuiTwigLoaderPlugin",
+        "module": "Spryker.Gui",
+        "module-version": "3.19.0"
+      },
+      "592c8bb46386da1e7723e7b251aee482776660d4": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\Gui\\Communication\\Plugin\\Twig\\NumberFormatterTwigPlugin",
+        "module": "Spryker.Gui",
+        "module-version": "3.45.0"
+      }
+    }
+  },
+  "Spryker.Http": {
+    "configure-env": {
+      "89b8080f26ae25ea25193dc88855327b8c5f7443": {
+        "target": "\\Spryker\\Shared\\Http\\HttpConstants::URI_SIGNER_SECRET_KEY",
+        "value": "JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2",
+        "module": "Spryker.Http",
+        "module-version": "1.7.1"
+      }
+    }
+  },
+  "Spryker.Locale": {
+    "wire-plugin": {
+      "5536ef8378e029b398e7177f6bb798dced65b6fe": {
+        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getApplicationPlugins",
+        "source": "\\Spryker\\Yves\\Locale\\Plugin\\Application\\LocaleApplicationPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      },
+      "9817409787d44efbbd1e67e00935c586da53993c": {
+        "target": "\\Spryker\\Yves\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
+        "source": "\\Spryker\\Yves\\Locale\\Plugin\\EventDispatcher\\LocaleEventDispatcherPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      },
+      "03c024d8bb8784c404fb929a4fb69ef86ffafac0": {
+        "target": "\\Spryker\\Zed\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
+        "source": "\\Spryker\\Zed\\Locale\\Communication\\Plugin\\EventDispatcher\\LocaleEventDispatcherPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      },
+      "6cc23e56d3af8ebd462bdfd592040222766fb8ea": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackofficeApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Locale\\Communication\\Plugin\\Application\\LocaleApplicationPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      },
+      "d5e2eca0dcfda8c7cc18506fcba9cd648c8df365": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackendApiApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Locale\\Communication\\Plugin\\Application\\LocaleApplicationPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      },
+      "0d4604ea1739bccf45cf64f6d867ba7ec746a691": {
+        "target": "\\Spryker\\Zed\\MerchantPortalApplication\\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Locale\\Communication\\Plugin\\Application\\LocaleApplicationPlugin",
+        "module": "Spryker.Locale",
+        "module-version": "3.2.0"
+      }
+    }
+  },
+  "Spryker.MerchantGui": {
+    "wire-plugin": {
+      "fc3d5c320eec4de8087848f363d1291d27966cf5": {
+        "target": "\\Spryker\\Zed\\ProductOfferGui\\ProductOfferGuiDependencyProvider::getProductOfferListActionViewDataExpanderPlugins",
+        "source": "\\Spryker\\Zed\\MerchantGui\\Communication\\Plugin\\ProductOffer\\MerchantProductOfferListActionViewDataExpanderPlugin",
+        "module": "Spryker.MerchantGui",
+        "module-version": "3.4.0"
+      }
+    }
+  },
+  "Spryker.MessageBroker": {
+    "wire-plugin": {
+      "b10d69c4e2cba8b2309f95add517612735fffe65": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\MessageBroker\\Communication\\Plugin\\Console\\MessageBrokerWorkerConsole",
+        "module": "Spryker.MessageBroker",
+        "module-version": "1.0.0"
+      },
+      "16b2449ad2a7bdc236d40dceea28758af9266a7d": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\MessageBroker\\Communication\\Plugin\\Console\\MessageBrokerDebugConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.MessageBroker",
+        "module-version": "1.0.0"
+      },
+      "9ea0996dd6f597caea161cd4b408e9dc5ed52556": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageAttributeProviderPlugins",
+        "source": "\\Spryker\\Zed\\MessageBroker\\Communication\\Plugin\\MessageBroker\\CorrelationIdMessageAttributeProviderPlugin",
+        "module": "Spryker.MessageBroker",
+        "module-version": "1.0.0"
+      },
+      "225427b04cfa0f7938d6bac64977c89a3c37b7c9": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageAttributeProviderPlugins",
+        "source": "\\Spryker\\Zed\\MessageBroker\\Communication\\Plugin\\MessageBroker\\TimestampMessageAttributeProviderPlugin",
+        "module": "Spryker.MessageBroker",
+        "module-version": "1.0.0"
+      },
+      "e8414e7caf3f6b86d71fcd0524a417cfacb4af5e": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMiddlewarePlugins",
+        "source": "\\Spryker\\Zed\\MessageBroker\\Communication\\Plugin\\MessageBroker\\ValidationMiddlewarePlugin",
+        "module": "Spryker.MessageBroker",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.MessageBrokerAws": {
+    "wire-plugin": {
+      "f86e50265dda3f596f291f4bc7ca8eb004545852": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Console\\MessageBrokerAwsSqsQueuesCreatorConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "d72dfc672df943a3f9440c83406ccc69d3fc0bb5": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Console\\MessageBrokerAwsSnsTopicsCreatorConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "eda4f174bf33699552c53cd26cb23fb74905fc8e": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Console\\MessageBrokerSqsToSnsSubscriberConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "8257ee37af7d7bba1cc82c02cb3c9e972a6a5b3d": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageSenderPlugins",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Plugin\\MessageBroker\\Sender\\AwsSnsMessageSenderPlugin",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "acf2b38827b1765bef8fa35358e7bb22d0e2fd32": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageSenderPlugins",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Plugin\\MessageBroker\\Sender\\AwsSqsMessageSenderPlugin",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "0930f6199d974b05bf552be209cd457d1a3844bc": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageSenderPlugins",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Plugin\\MessageBroker\\Sender\\HttpMessageSenderPlugin",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      },
+      "2ad2b5dc803f399f0f26f6119b6d668c9748dea4": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageReceiverPlugins",
+        "source": "\\Spryker\\Zed\\MessageBrokerAws\\Communication\\Plugin\\MessageBroker\\Receiver\\AwsSqsMessageReceiverPlugin",
+        "module": "Spryker.MessageBrokerAws",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.Money": {
+    "wire-plugin": {
+      "b8d5d31b5d5628c4d077fd0c7259dc5e75c68b1e": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\Money\\Communication\\Plugin\\Twig\\MoneyTwigPlugin",
+        "module": "Spryker.Money",
+        "module-version": "2.7.0"
+      }
+    },
+    "unwire-plugin": {
+      "299bae078110f84afd3ab379ec7e726c33f1aa57": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::createMoneyFormTypePlugin",
+        "source": "\\Spryker\\Zed\\Money\\Communication\\Plugin\\Form\\MoneyFormTypePlugin",
+        "module": "Spryker.Money",
+        "module-version": "2.10.1"
+      },
+      "312a0e62803762723af2065292b39e16bf3c5abb": {
+        "target": "\\Spryker\\Zed\\ProductOption\\ProductOptionDependencyProvider::createMoneyCollectionFormTypePlugin",
+        "source": "\\Spryker\\Zed\\Money\\Communication\\Plugin\\Form\\MoneyCollectionFormTypePlugin",
+        "module": "Spryker.Money",
+        "module-version": "2.10.1"
+      },
+      "a0b0de61c0df15eec1fdc0d4453865356110bdec": {
+        "target": "\\Spryker\\Zed\\ShipmentGui\\ShipmentGuiDependencyProvider::getMoneyCollectionFormTypePlugin",
+        "source": "\\Spryker\\Zed\\Money\\Communication\\Plugin\\Form\\MoneyCollectionFormTypePlugin",
+        "module": "Spryker.Money",
+        "module-version": "2.10.1"
+      }
+    }
+  },
+  "Spryker.MultiCart": {
+    "wire-plugin": {
+      "9559fde834a2dce6db0745308dd42824357733b8": {
+        "target": "\\Spryker\\Client\\PersistentCart\\PersistentCartDependencyProvider::getQuoteUpdatePlugins",
+        "source": "\\Spryker\\Client\\MultiCart\\Plugin\\SaveCustomerQuotesQuoteUpdatePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "3e5f18fa8614815e3aa830aee165fe170e479723": {
+        "target": "\\Spryker\\Client\\PersistentCart\\PersistentCartDependencyProvider::getQuoteUpdatePlugins",
+        "source": "\\Spryker\\Client\\MultiCart\\Plugin\\DefaultQuoteUpdatePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "0c8ba0f048d876609341711659d43602d9331bab": {
+        "target": "\\Spryker\\Client\\PersistentCart\\PersistentCartDependencyProvider::getChangeRequestExtendPlugins",
+        "source": "\\Spryker\\Client\\MultiCart\\Plugin\\QuoteSelectorPersistentCartChangeExpanderPlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "3f663ac34edded0dbb6f4d785f851c0b93961fd9": {
+        "target": "\\Spryker\\Client\\Quote\\QuoteDependencyProvider::getQuoteTransferExpanderPlugins",
+        "source": "\\Spryker\\Client\\MultiCart\\Plugin\\NameQuoteTransferExpanderPlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "a35485b63791e9f5e19e297541076f96d6a15cbe": {
+        "target": "\\Spryker\\Client\\Customer\\CustomerDependencyProvider::getCustomerSessionSetPlugins",
+        "source": "\\Spryker\\Client\\MultiCart\\Plugin\\GuestCartSaveCustomerSessionSetPlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "f3a8a6fe464d62b293bcd45f80efd62c1cf7c12e": {
+        "target": "\\Spryker\\Zed\\PersistentCart\\PersistentCartDependencyProvider::getQuoteResponseExpanderPlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\CustomerCartQuoteResponseExpanderPlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "8cf7a779a4bfe439e2b5531f02bcce16c3764cc5": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteCreateAfterPlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\AddSuccessMessageAfterQuoteCreatedPlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "b8a2996cabaf96b25507aad659869dc9a4a865cd": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteCreateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\AddDefaultNameBeforeQuoteSavePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "b8bbef93cd08c879a20e7a89ecbeb059f158d4c7": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteCreateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\ResolveQuoteNameBeforeQuoteCreatePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "ec3d261e81dc828ccc3cfbbd79d06f60146fa7b5": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteCreateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\DeactivateQuotesBeforeQuoteSavePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "0ac9a0e1313cc497191a525900164f54f8f53c76": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteUpdateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\AddDefaultNameBeforeQuoteSavePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "e8ea179dca7c35cafc3306f3c9d672299aaf1da8": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteUpdateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\ResolveQuoteNameBeforeQuoteCreatePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      },
+      "51ab7af6f6b77393c4c7df840c8f9cf2351ae95a": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteUpdateBeforePlugins",
+        "source": "\\Spryker\\Zed\\MultiCart\\Communication\\Plugin\\DeactivateQuotesBeforeQuoteSavePlugin",
+        "module": "Spryker.MultiCart",
+        "module-version": "0.1.0"
+      }
+    }
+  },
+  "Spryker.NavigationStorage": {
+    "wire-plugin": {
+      "aa60fd669b743cb0abdc928076e2f1ca94ae785f": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\NavigationStorage\\Communication\\Plugin\\Synchronization\\NavigationSynchronizationDataPlugin",
+        "module": "Spryker.NavigationStorage",
+        "module-version": "1.0.1"
+      },
+      "cf40d8b820236002341ef835274d1f1fc5c3252e": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\NavigationStorage\\Communication\\Plugin\\Event\\NavigationEventResourceQueryContainerPlugin",
+        "module": "Spryker.NavigationStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.Oauth": {
+    "wire-plugin": {
+      "9fd62d7fc071dc983678f4d0ef72b795b9dc0b4e": {
+        "target": "\\Spryker\\Zed\\Installer\\InstallerDependencyProvider::getInstallerPlugins",
+        "source": "\\Spryker\\Zed\\Oauth\\Communication\\Plugin\\Installer\\OauthClientInstallerPlugin",
+        "module": "Spryker.Oauth",
+        "module-version": "1.4.0"
+      }
+    }
+  },
+  "Spryker.OauthAgentConnector": {
+    "wire-plugin": {
+      "2db48058c3491a09058631b5a9f3d05460b65764": {
+        "target": "\\Spryker\\Zed\\Installer\\InstallerDependencyProvider::getInstallerPlugins",
+        "source": "\\Spryker\\Zed\\OauthAgentConnector\\Communication\\Plugin\\Installer\\AgentOauthScopeInstallerPlugin",
+        "module": "Spryker.OauthAgentConnector",
+        "module-version": "1.0.0"
+      },
+      "c9bcab121be9ab857899f14db4fdcb25719ae380": {
+        "target": "\\Spryker\\Zed\\Oauth\\OauthDependencyProvider::getUserProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthAgentConnector\\Communication\\Plugin\\Oauth\\AgentOauthUserProviderPlugin",
+        "module": "Spryker.OauthAgentConnector",
+        "module-version": "1.0.0"
+      },
+      "4b6f231432e5bb055f521907fbbff8db97ae6215": {
+        "target": "\\Spryker\\Zed\\Oauth\\OauthDependencyProvider::getScopeProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthAgentConnector\\Communication\\Plugin\\Oauth\\AgentOauthScopeProviderPlugin",
+        "module": "Spryker.OauthAgentConnector",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.OauthAuth0": {
+    "configure-env": {
+      "8462f7a9ee024d827ccbd300235a1117216c92ff": {
+        "target": "\\Spryker\\Shared\\OauthAuth0\\OauthAuth0Constants::AUTH0_CLIENT_ID",
+        "value": {
+          "value": "getenv('AUTH0_CLIENT_ID') ?: ''",
+          "is_literal": true
+        },
+        "module": "Spryker.OauthAuth0",
+        "module-version": "1.0.0"
+      },
+      "898055a786682130338ccc2a40a1742f79110292": {
+        "target": "\\Spryker\\Shared\\OauthAuth0\\OauthAuth0Constants::AUTH0_CLIENT_SECRET",
+        "value": {
+          "value": "getenv('AUTH0_CLIENT_SECRET') ?: ''",
+          "is_literal": true
+        },
+        "module": "Spryker.OauthAuth0",
+        "module-version": "1.0.0"
+      },
+      "e8815aba8001fd589e1724ae986ee1877ffcbf38": {
+        "target": "\\Spryker\\Shared\\OauthAuth0\\OauthAuth0Constants::AUTH0_CUSTOM_DOMAIN",
+        "value": {
+          "value": "getenv('AUTH0_CUSTOM_DOMAIN') ?: ''",
+          "is_literal": true
+        },
+        "module": "Spryker.OauthAuth0",
+        "module-version": "1.0.0"
+      }
+    },
+    "wire-plugin": {
+      "7a446bbdc3526ec81db6382ede44fec8943cc2ff": {
+        "target": "\\Spryker\\Zed\\OauthClient\\OauthClientDependencyProvider::getOauthAccessTokenProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthAuth0\\Communication\\Plugin\\OauthClient\\Auth0OauthAccessTokenProviderPlugin",
+        "module": "Spryker.OauthAuth0",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.OauthClient": {
+    "configure-env": {
+      "fc0da1c5b38efbedb82bf81698803d0dfc7b728e": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_MESSAGE_BROKER",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::PROVIDER_NAME",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "708e30c15b7c45445afa24d74e2168f892b5dca8": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_GRANT_TYPE_FOR_MESSAGE_BROKER",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "53512dd13c23eaf75e06559f7d775f3cc698d492": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER",
+        "value": "aop-event-platform",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "0a1e65fe177e67da229a60bbeb10039862f61f4b": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::PROVIDER_NAME",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "7af92127ca68fec607e85358db9f5a8ebd5d5d54": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE",
+        "value": "\\Spryker\\Zed\\OauthAuth0\\OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "ce7b518753e6282063e22b9734fc20488248108e": {
+        "target": "\\Spryker\\Shared\\OauthClient\\OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE",
+        "value": "aop-app",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      }
+    },
+    "wire-plugin": {
+      "f19f503360aa42ba1810e98cc4f0297d232c23f6": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageAttributeProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthClient\\Communication\\Plugin\\MessageBroker\\AccessTokenMessageAttributeProviderPlugin",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      },
+      "14fac154472841ba48f43ec8e7bffc27cdd2bdd4": {
+        "target": "\\Spryker\\Zed\\Payment\\PaymentDependencyProvider::getPaymentAuthorizeRequestExpanderPlugins",
+        "source": "\\Spryker\\Zed\\OauthClient\\Communication\\Plugin\\Payment\\AccessTokenPaymentAuthorizeRequestExpanderPlugin",
+        "module": "Spryker.OauthClient",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.OauthCompanyUser": {
+    "wire-plugin": {
+      "c79db188f05f1bd77db8cc75b8cd5cbac3c0e560": {
+        "target": "\\Spryker\\Client\\Customer\\CustomerDependencyProvider::getAccessTokenAuthenticationHandlerPlugin",
+        "source": "\\Spryker\\Client\\OauthCompanyUser\\Plugin\\Customer\\CompanyUserAccessTokenAuthenticationHandlerPlugin",
+        "module": "Spryker.OauthCompanyUser",
+        "module-version": "2.0.0"
+      },
+      "4b2004262d192e393c19e74e9262ec9fe8480472": {
+        "target": "\\Spryker\\Zed\\Oauth\\OauthDependencyProvider::getUserProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthCompanyUser\\Communication\\Plugin\\Oauth\\CompanyUserAccessTokenOauthUserProviderPlugin",
+        "module": "Spryker.OauthCompanyUser",
+        "module-version": "2.0.0"
+      }
+    }
+  },
+  "Spryker.OauthCustomerConnector": {
+    "wire-plugin": {
+      "b78c02977ae1beae1bee11fd4ce4dd75575e2468": {
+        "target": "\\Spryker\\Zed\\Oauth\\OauthDependencyProvider::getUserProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin\\Oauth\\CustomerImpersonationOauthUserProviderPlugin",
+        "module": "Spryker.OauthCustomerConnector",
+        "module-version": "1.6.0"
+      },
+      "2935818cc2f2bdc2884f16bbdd4cf3fd0a86d32f": {
+        "target": "\\Spryker\\Zed\\Oauth\\OauthDependencyProvider::getScopeProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin\\Oauth\\CustomerImpersonationOauthScopeProviderPlugin",
+        "module": "Spryker.OauthCustomerConnector",
+        "module-version": "1.6.0"
+      }
+    }
+  },
+  "Spryker.OauthDummy": {
+    "wire-plugin": {
+      "62b1bb346623de584c9dd817433c4fe5c7455c50": {
+        "target": "\\Spryker\\Zed\\OauthClient\\OauthClientDependencyProvider::getOauthAccessTokenProviderPlugins",
+        "source": "\\Spryker\\Zed\\OauthDummy\\Communication\\Plugin\\OauthClient\\DummyOauthAccessTokenProviderPlugin",
+        "module": "Spryker.OauthDummy",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.Payment": {
+    "glossary-key": {
+      "2b036dc69a5721b38249fa9b387f0a6ff354c90f": {
+        "payment.cancellation.title": {
+          "de_DE": "Bezahlvorgang abgebrochen",
+          "en_US": "Payment cancellation"
+        },
+        "payment.cancellation.message": {
+          "de_DE": "Du hast den Bezahlvorgang abgebrochen.",
+          "en_US": "You have cancelled your payment."
+        },
+        "payment_foreign.thank_you": {
+          "de_DE": "Danke",
+          "en_US": "Thank you"
+        },
+        "payment_foreign.go_to_my_account": {
+          "de_DE": "Gehe zum \"Benutzerkonto\"",
+          "en_US": "Go to \"My Account\""
+        },
+        "payment_foreign.success.order.placement.message": {
+          "de_DE": "Deine Bestellung ist erfolgreich bei uns eingegangen. Die Bestellbest\u00e4tigung wurde soeben per E-Mail versendet. In deinem Benutzerkonto kannst deine Bestellung \u00fcberpr\u00fcfen und nachverfolgen.",
+          "en_US": "Your order has been paid successfully. You will receive your order confirmation email in a few minutes. You can check and track your order in your account."
+        },
+        "oms.state.reservation-cancelled": {
+          "en_US": "Reservation Cancelled",
+          "de_DE": "Reservation Cancelled"
+        },
+        "oms.state.reservation-cancellation-pending": {
+          "en_US": "Reservation Cancellation Pending",
+          "de_DE": "Reservation Cancellation Pending"
+        },
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      }
+    },
+    "configure-env": {
+      "7af72e29abcf1d7ca2de097d15d992b19a0334c8": {
+        "target": "\\Spryker\\Shared\\Oms\\OmsConstants::PROCESS_LOCATION",
+        "value": [
+          "APPLICATION_ROOT_DIR . '/vendor/spryker/payment/config/Zed/Oms'"
+        ],
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      }
+    },
+    "wire-plugin": {
+      "a6f27c1c393bfafd18b6a8cad9d8dab8b68c24c9": {
+        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutPostHooks",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\Checkout\\PaymentAuthorizationCheckoutPostSavePlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "7fb932783d3887fc379a66ecd8475beb6f3a1548": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentCancelReservationFailedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "1647f980392ffa03b3313c9f224a9e51d7b54879": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentConfirmationFailedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "77e25a20183bf3fcaa47567e74957f95d961a527": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentConfirmedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "e75b77031576eb2f885cdd33a7cb3d2f8b09ec14": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentPreauthorizationFailedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "382763cebec12e293b690546481c2df8d9b7664e": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentPreauthorizedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "59a458b2b269a766b99029a0558fcf1929062dee": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentReservationCanceledMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "ffffc2ee9b9c8f62adcf82f540662e3cc886dbe2": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentRefundedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "5bef9e44325a34c6b653225f24989be27cbb2e4f": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentRefundFailedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "a32cce89baa67d2783ed898ab1517f834efc81d6": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentMethodAddedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "e80b2e734a083465c6bc3924558716567c6e19f3": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\MessageBroker\\PaymentMethodDeletedMessageHandlerPlugin",
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "2883cf264081423a698163e9a662f5c514eff331": {
+        "target": "\\Spryker\\Zed\\Oms\\OmsDependencyProvider::extendCommandPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\Command\\SendEventPaymentConfirmationPendingPlugin",
+        "arguments": {
+          "append-arguments": [
+            {
+              "value": "Payment/SendEventPaymentConfirmationPending",
+              "is_literal": false
+            }
+          ]
+        },
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "65f6c871b04c88c259b6caab9e7b5f119794b266": {
+        "target": "\\Spryker\\Zed\\Oms\\OmsDependencyProvider::extendCommandPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\Command\\SendEventPaymentRefundPendingPlugin",
+        "arguments": {
+          "append-arguments": [
+            {
+              "value": "Payment/SendEventPaymentRefundPending",
+              "is_literal": false
+            }
+          ]
+        },
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      },
+      "5224b5e3adbd7ebf2f6a4ecf02730bc44271a1fd": {
+        "target": "\\Spryker\\Zed\\Oms\\OmsDependencyProvider::extendCommandPlugins",
+        "source": "\\Spryker\\Zed\\Payment\\Communication\\Plugin\\Command\\SendEventPaymentCancelReservationPendingPlugin",
+        "arguments": {
+          "append-arguments": [
+            {
+              "value": "Payment/SendEventPaymentCancelReservationPending",
+              "is_literal": false
+            }
+          ]
+        },
+        "module": "Spryker.Payment",
+        "module-version": "5.5.0"
+      }
+    }
+  },
+  "Spryker.PersistentCart": {
+    "wire-plugin": {
+      "6fc98ef9859771c6862dbbd9edd10e262044e6de": {
+        "target": "\\Spryker\\Zed\\CartsRestApi\\CartsRestApiDependencyProvider::getQuoteCreatorPlugin",
+        "source": "\\Spryker\\Zed\\PersistentCart\\Communication\\Plugin\\CartsRestApi\\QuoteCreatorPlugin",
+        "module": "Spryker.PersistentCart",
+        "module-version": "1.9.0"
+      }
+    }
+  },
+  "Spryker.Price": {
+    "wire-plugin": {
+      "1601057ad6316fa752c4d6f7be599cc8cfc6afcc": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Price\\Communication\\Plugin\\Quote\\QuotePriceModeValidatorPlugin",
+        "module": "Spryker.Price",
+        "module-version": "5.5.0"
+      }
+    }
+  },
+  "Spryker.PriceProduct": {
+    "wire-plugin": {
+      "109e0c4d3ab1380b796167bcc853580cd79866af": {
+        "target": "\\Spryker\\Zed\\Wishlist\\WishlistDependencyProvider::getWishlistItemExpanderPlugins",
+        "source": "\\Spryker\\Zed\\PriceProduct\\Communication\\Plugin\\Wishlist\\PriceProductWishlistItemExpanderPlugin",
+        "module": "Spryker.PriceProduct",
+        "module-version": "4.22.0"
+      }
+    }
+  },
+  "Spryker.PriceProductMerchantRelationship": {
+    "wire-plugin": {
+      "4c6dfb646d96657606c15068e2b81e3fb467d0dd": {
+        "target": "\\Spryker\\Service\\PriceProduct\\PriceProductDependencyProvider::getPreBuildPriceProductGroupKeyPlugins",
+        "source": "\\Spryker\\Service\\PriceProductMerchantRelationship\\Plugin\\PriceProduct\\MerchantRelationshipPreBuildPriceProductGroupKeyPlugin",
+        "module": "Spryker.PriceProductMerchantRelationship",
+        "module-version": "1.9.0"
+      },
+      "85b26a2cbb700f284bde58c9de86f313be4e37dd": {
+        "target": "\\Spryker\\Zed\\PriceProduct\\PriceProductDependencyProvider::getPriceProductCollectionDeletePlugins",
+        "source": "\\Spryker\\Zed\\PriceProductMerchantRelationship\\Communication\\Plugin\\PriceProduct\\MerchantRelationshipPriceProductCollectionDeletePlugin",
+        "module": "Spryker.PriceProductMerchantRelationship",
+        "module-version": "1.9.0"
+      }
+    }
+  },
+  "Spryker.PriceProductStorage": {
+    "wire-plugin": {
+      "f51f930402f7e79fec4b49dd8b9ee06ad7e90e9d": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\PriceProductStorage\\Communication\\Plugin\\Synchronization\\PriceProductConcreteSynchronizationDataPlugin",
+        "module": "Spryker.PriceProductStorage",
+        "module-version": "2.0.1"
+      },
+      "f95f7282319690f06363200745059a3cb4b5fde1": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\PriceProductStorage\\Communication\\Plugin\\Synchronization\\PriceProductAbstractSynchronizationDataPlugin",
+        "module": "Spryker.PriceProductStorage",
+        "module-version": "2.0.1"
+      },
+      "f3e8959c64d2c1983ae9cc37059164383272c4b9": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\PriceProductStorage\\Communication\\Plugin\\Event\\PriceProductConcreteEventResourceQueryContainerPlugin",
+        "module": "Spryker.PriceProductStorage",
+        "module-version": "2.0.1"
+      },
+      "0b03113ca24b17280e3ec69f1558eb3ab1133014": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\PriceProductStorage\\Communication\\Plugin\\Event\\PriceProductAbstractEventResourceQueryContainerPlugin",
+        "module": "Spryker.PriceProductStorage",
+        "module-version": "2.0.1"
+      }
+    }
+  },
+  "Spryker.PriceProductVolume": {
+    "wire-plugin": {
+      "9c5124b440b363aaab24796e40a8675dc083f495": {
+        "target": "\\Spryker\\Zed\\PriceProduct\\PriceProductDependencyProvider::getPriceProductValidatorPlugins",
+        "source": "\\Spryker\\Zed\\PriceProductVolume\\Communication\\Plugin\\PriceProduct\\PriceProductVolumeValidatorPlugin",
+        "module": "Spryker.PriceProductVolume",
+        "module-version": "3.3.0"
+      }
+    }
+  },
+  "Spryker.ProductAlternativeDataImport": {
+    "wire-plugin": {
+      "0da33fb00344db8367a5f58625078442e94c8164": {
+        "target": "\\Spryker\\Zed\\DataImport\\DataImportDependencyProvider::getDataImporterPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeDataImport\\Communication\\Plugin\\ProductAlternativeDataImportPlugin",
+        "module": "Spryker.ProductAlternativeDataImport",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductAlternativeGui": {
+    "wire-plugin": {
+      "ec9c15aa3d7eeee8059e9f0c1655bc300a1cd250": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteFormEditTabsExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeGui\\Communication\\Plugin\\ProductManagement\\ProductConcreteFormEditTabsExpanderPlugin",
+        "module": "Spryker.ProductAlternativeGui",
+        "module-version": "1.0.0"
+      },
+      "8e6fcf7e47cd4ff20aaea12ba142f4641e6200c4": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteEditFormExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeGui\\Communication\\Plugin\\ProductManagement\\ProductConcreteEditFormExpanderPlugin",
+        "module": "Spryker.ProductAlternativeGui",
+        "module-version": "1.0.0"
+      },
+      "80b4f90adf2733ccb137fd28aa297c3aaa21728c": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteFormEditDataProviderExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeGui\\Communication\\Plugin\\ProductManagement\\ProductConcreteFormEditDataProviderExpanderPlugin",
+        "module": "Spryker.ProductAlternativeGui",
+        "module-version": "1.0.0"
+      },
+      "84008bb945c842e3b09348f50084c729ddecd284": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductFormTransferMapperExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeGui\\Communication\\Plugin\\ProductManagement\\ProductFormTransferMapperExpanderPlugin",
+        "module": "Spryker.ProductAlternativeGui",
+        "module-version": "1.0.0"
+      },
+      "ee0da59460b339a10ebd88aa740c481045facb17": {
+        "target": "\\Spryker\\Zed\\Product\\ProductDependencyProvider::getProductConcreteBeforeUpdatePlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeGui\\Communication\\Plugin\\Product\\ProductConcretePluginUpdate",
+        "module": "Spryker.ProductAlternativeGui",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductAlternativeProductLabelConnector": {
+    "wire-plugin": {
+      "6627590fb3f35279554a2b807573d60cb675cfe4": {
+        "target": "\\Spryker\\Zed\\ProductAlternative\\ProductAlternativeDependencyProvider::getPostProductAlternativeCreatePlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeProductLabelConnector\\Communication\\Plugin\\PostProductAlternativeCreatePlugin",
+        "module": "Spryker.ProductAlternativeProductLabelConnector",
+        "module-version": "1.0.0"
+      },
+      "6487f8713d6e64b74d3c9cffba10877adff90926": {
+        "target": "\\Spryker\\Zed\\ProductAlternative\\ProductAlternativeDependencyProvider::getPostProductAlternativeDeletePlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeProductLabelConnector\\Communication\\Plugin\\PostProductAlternativeDeletePlugin",
+        "module": "Spryker.ProductAlternativeProductLabelConnector",
+        "module-version": "1.0.0"
+      },
+      "79cb1563437196aea01fa6e4a803105db273ebcf": {
+        "target": "\\Spryker\\Zed\\ProductLabel\\ProductLabelDependencyProvider::getProductLabelRelationUpdaterPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeProductLabelConnector\\Communication\\Plugin\\ProductAlternativeLabelUpdaterPlugin",
+        "module": "Spryker.ProductAlternativeProductLabelConnector",
+        "module-version": "1.0.0"
+      },
+      "43e85bf0067a405ff52f1922881e1735be7e3622": {
+        "target": "\\Spryker\\Zed\\Installer\\InstallerDependencyProvider::getInstallerPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeProductLabelConnector\\Communication\\Plugin\\Installer\\ProductAlternativeProductLabelConnectorInstallerPlugin",
+        "module": "Spryker.ProductAlternativeProductLabelConnector",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductAlternativeStorage": {
+    "wire-plugin": {
+      "d40fa4de762eb52bd8735e8d3d9376d72bbd78b4": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeStorage\\Communication\\Plugin\\Synchronization\\ProductAlternativeSynchronizationDataBulkPlugin",
+        "module": "Spryker.ProductAlternativeStorage",
+        "module-version": "1.8.0"
+      },
+      "8ef6f7d4e2f8e692cf73895b2c078832e8e25f13": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductAlternativeStorage\\Communication\\Plugin\\Synchronization\\ProductReplacementForSynchronizationDataBulkPlugin",
+        "module": "Spryker.ProductAlternativeStorage",
+        "module-version": "1.8.0"
+      }
+    }
+  },
+  "Spryker.ProductAvailabilitiesRestApi": {
+    "wire-plugin": {
+      "b633647ccc9a6e8f5527a2a513c65a77ad4ab637": {
+        "target": "\\Spryker\\Glue\\WishlistsRestApi\\WishlistsRestApiDependencyProvider::getRestWishlistItemsAttributesMapperPlugins",
+        "source": "\\Spryker\\Glue\\ProductAvailabilitiesRestApi\\Plugin\\Wishlist\\ProductAvailabilityRestWishlistItemsAttributesMapperPlugin",
+        "module": "Spryker.ProductAvailabilitiesRestApi",
+        "module-version": "4.2.0"
+      }
+    }
+  },
+  "Spryker.ProductBundle": {
+    "wire-plugin": {
+      "63ebefc6e34c3016c002ee231c842d8b711a93bf": {
+        "target": "\\Spryker\\Client\\Cart\\CartDependencyProvider::getItemCountPlugin",
+        "source": "\\Spryker\\Client\\ProductBundle\\Plugin\\Cart\\ProductBundleItemCountQuantityPlugin",
+        "module": "Spryker.ProductBundle",
+        "module-version": "7.7.0"
+      }
+    }
+  },
+  "Spryker.ProductCategory": {
+    "wire-plugin": {
+      "8c65203854bbfd1d4e6ad6f84ec1d2d2166e9184": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getCategoryRelationReadPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategory\\Communication\\Plugin\\CategoryGui\\ProductCategoryRelationReadPlugin",
+        "module": "Spryker.ProductCategory",
+        "module-version": "4.12.0"
+      },
+      "dc65443e7628a880c9bcd8ba5d3613e067163fa2": {
+        "target": "\\Spryker\\Zed\\Product\\ProductDependencyProvider::getProductConcreteExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategory\\Communication\\Plugin\\Product\\ProductConcreteCategoriesExpanderPlugin",
+        "module": "Spryker.ProductCategory",
+        "module-version": "4.16.0"
+      }
+    }
+  },
+  "Spryker.ProductCategoryFilterStorage": {
+    "wire-plugin": {
+      "28b074d6ed233e4bdf13dc2de874e02292dc7938": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryFilterStorage\\Communication\\Plugin\\Synchronization\\ProductCategoryFilterSynchronizationDataPlugin",
+        "module": "Spryker.ProductCategoryFilterStorage",
+        "module-version": "1.0.1"
+      },
+      "e6b0032b8fb2d05fe169b12bcf735b5602edad1a": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryFilterStorage\\Communication\\Plugin\\Event\\ProductCategoryFilterEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductCategoryFilterStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductCategorySearch": {
+    "wire-plugin": {
+      "d7d3d8ed6cdcd028773c41c73770294eebcc91f0": {
+        "target": "\\Spryker\\Zed\\ProductPageSearch\\ProductPageSearchDependencyProvider::getDataLoaderPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategorySearch\\Communication\\Plugin\\ProductPageSearch\\ProductCategoryPageDataLoaderPlugin",
+        "module": "Spryker.ProductCategorySearch",
+        "module-version": "1.0.0"
+      },
+      "a742ba11197e8db42120cea7dcf1f7b0084f0dba": {
+        "target": "\\Spryker\\Zed\\ProductPageSearch\\ProductPageSearchDependencyProvider::getProductAbstractMapExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategorySearch\\Communication\\Plugin\\ProductPageSearch\\Elasticsearch\\ProductCategoryMapExpanderPlugin",
+        "module": "Spryker.ProductCategorySearch",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductCategoryStorage": {
+    "unwire-plugin": {
+      "7084400131cac440f476dd1dc47222cc7652bda3": {
+        "target": "\\Spryker\\Zed\\Event\\EventDependencyProvider::getEventSubscriberCollection",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Event\\Subscriber\\ProductCategoryStorageEventSubscriber",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "0cc4ee37a4dfbff3d656a1dd85d73dc339f38ce1": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Event\\ProductCategoryEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "e88314987be32986c56c73d360cb3a50fb2e790f": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Synchronization\\ProductCategorySynchronizationDataPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      }
+    },
+    "wire-plugin": {
+      "71a411c09bcfa3bca816181254d500dece3a9c01": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getPublisherTriggerPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\ProductCategoryPublisherTriggerPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "fe86a5d2a20d220c78811434311950949cb63475": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\Category\\CategoryWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "4aec631b30701d47b21c745de846722fe7e5b50c": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\Category\\CategoryIsActiveAndCategoryKeyWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "2e156f2f4a982d4cc70c8a99684e1f049fdb9a8b": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "5146124a1861d624cc95c2e411dd18634163a962": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\CategoryAttribute\\CategoryAttributeNameWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "250e06d7a8722373a2af03e48e060ee3a23b7fdf": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\CategoryNode\\CategoryNodeWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "1c3e386f3158f930d265bdc458ffa21625829d53": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\CategoryUrl\\CategoryUrlWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "a074908649c6afda57b0fe9edcd62567034d1877": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\CategoryUrl\\CategoryUrlAndResourceCategorynodeWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "893f8c27d7187e1b358bc9a283bea539fc8b9939": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\ProductCategory\\ProductCategoryWriteForPublishingPublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "848af268fe7ca65333bcbbb0f1c01bcce78c5695": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductCategoryStoragePlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Publisher\\ProductCategory\\ProductCategoryWritePublisherPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      },
+      "8c98888e68f914a5d3930b262cbd7f0eb47501e2": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductCategoryStorage\\Communication\\Plugin\\Synchronization\\ProductCategorySynchronizationDataBulkRepositoryPlugin",
+        "module": "Spryker.ProductCategoryStorage",
+        "module-version": "2.2.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinued": {
+    "wire-plugin": {
+      "907e2cc0303c83aa5694afe2b6d02b0ae8b83f65": {
+        "target": "\\Spryker\\Zed\\ProductAlternative\\ProductAlternativeDependencyProvider::getAlternativeProductApplicablePlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\ProductAlternative\\DiscontinuedCheckAlternativeProductApplicablePlugin",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      },
+      "348cef54b4d084290be498165e53d7cd9716cc6d": {
+        "target": "\\Spryker\\Zed\\Product\\ProductDependencyProvider::getProductConcreteAfterUpdatePlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\SaveDiscontinuedNotesProductConcretePluginUpdate",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      },
+      "51d0285a060d2451ae9755cd274d9898f3ab52cc": {
+        "target": "\\Spryker\\Zed\\Wishlist\\WishlistDependencyProvider::getAddItemPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\Wishlist\\ProductDiscontinuedAddItemPreCheckPlugin",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      },
+      "3be09a7d6ca4d5715136979c79d079146b5f509a": {
+        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutPreConditions",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\Checkout\\ProductDiscontinuedCheckoutPreConditionPlugin",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      },
+      "692e8486c45f57ea05844422ef7391887bdf6313": {
+        "target": "\\Spryker\\Zed\\ShoppingList\\ShoppingListDependencyProvider::getAddItemPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\ShoppingList\\ProductDiscontinuedAddItemPreCheckPlugin",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      },
+      "3990be8f29438fc54977ad1d90abd64a7fbc58b3": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getCartPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinued\\Communication\\Plugin\\Cart\\ProductDiscontinuedCartPreCheckPlugin",
+        "module": "Spryker.ProductDiscontinued",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinuedDataImport": {
+    "wire-plugin": {
+      "e58e88a43e56740cc3c89d1cf7a7f89051fc1fcc": {
+        "target": "\\Spryker\\Zed\\DataImport\\DataImportDependencyProvider::getDataImporterPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedDataImport\\Communication\\Plugin\\ProductDiscontinuedDataImportPlugin",
+        "module": "Spryker.ProductDiscontinuedDataImport",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinuedGui": {
+    "wire-plugin": {
+      "e5b925a60109e976c50450169b6d2250e0518244": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteFormEditTabsExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedGui\\Communication\\Plugin\\DiscontinueProductConcreteFormEditTabsExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedGui",
+        "module-version": "1.0.0"
+      },
+      "b3ea3c285b7251063e76095f99d6c85cbe026fb0": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteEditFormExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedGui\\Communication\\Plugin\\DiscontinuedProductConcreteEditFormExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedGui",
+        "module-version": "1.0.0"
+      },
+      "bc3b6a2027642f789cf80a219b57af3fac60ed0c": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductConcreteFormEditDataProviderExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedGui\\Communication\\Plugin\\DiscontinueProductConcreteFormEditDataProviderExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedGui",
+        "module-version": "1.0.0"
+      },
+      "2e28494ca64de95f508b54fb0f42d9febdfa807e": {
+        "target": "\\Spryker\\Zed\\ProductManagement\\ProductManagementDependencyProvider::getProductFormTransferMapperExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedGui\\Communication\\Plugin\\DiscontinuedNotesProductFormTransferMapperExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedGui",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinuedProductBundleConnector": {
+    "wire-plugin": {
+      "309c3d1974c873181100c540fa8fae4f825ef6d9": {
+        "target": "\\Spryker\\Zed\\ProductDiscontinued\\ProductDiscontinuedDependencyProvider::getPostProductDiscontinuePlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedProductBundleConnector\\Communication\\Plugin\\DiscontinueBundlePostProductDiscontinuePlugin",
+        "module": "Spryker.ProductDiscontinuedProductBundleConnector",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinuedProductLabelConnector": {
+    "wire-plugin": {
+      "4f93c5c7c92b4ddc653574d5e621fd1b1790f9af": {
+        "target": "\\Spryker\\Zed\\ProductDiscontinued\\ProductDiscontinuedDependencyProvider::getPostProductDiscontinuePlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedProductLabelConnector\\Communication\\Plugin\\PostProductDiscontinuedPlugin",
+        "module": "Spryker.ProductDiscontinuedProductLabelConnector",
+        "module-version": "1.0.0"
+      },
+      "a2cb385788fce636ed79fc4248df06a1ad7094cb": {
+        "target": "\\Spryker\\Zed\\ProductLabel\\ProductLabelDependencyProvider::getProductLabelRelationUpdaterPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedProductLabelConnector\\Communication\\Plugin\\ProductDiscontinuedLabelUpdaterPlugin",
+        "module": "Spryker.ProductDiscontinuedProductLabelConnector",
+        "module-version": "1.0.0"
+      },
+      "0310465a3953fc39790ea98e0599219b92fe4ccd": {
+        "target": "\\Spryker\\Zed\\Installer\\InstallerDependencyProvider::getInstallerPlugins",
+        "source": "\\Spryker\\Zed\\ProductDiscontinuedProductLabelConnector\\Communication\\Plugin\\Installer\\ProductDiscontinuedProductLabelConnectorInstallerPlugin",
+        "module": "Spryker.ProductDiscontinuedProductLabelConnector",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductDiscontinuedStorage": {
+    "wire-plugin": {
+      "1d6ea48682f42f63aaac653b3f4515a732877601": {
+        "target": "\\Spryker\\Client\\ProductStorage\\ProductStorageDependencyProvider::getProductViewExpanderPlugins",
+        "source": "\\Spryker\\Client\\ProductDiscontinuedStorage\\Plugin\\ProductStorage\\ProductViewDiscontinuedOptionsExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedStorage",
+        "module-version": "1.0.0"
+      },
+      "f9ec0c80a3bab545e8a286c139e376d531d841a7": {
+        "target": "\\Spryker\\Client\\ProductStorage\\ProductStorageDependencyProvider::getProductViewExpanderPlugins",
+        "source": "\\Spryker\\Client\\ProductDiscontinuedStorage\\Plugin\\ProductStorage\\ProductDiscontinuedProductAvailabilityExpanderPlugin",
+        "module": "Spryker.ProductDiscontinuedStorage",
+        "module-version": "1.0.0"
+      },
+      "c32441ab1cdf77f4e008b8628d6f5d5c7f1eb87e": {
+        "target": "\\Spryker\\Client\\ProductAlternativeStorage\\ProductAlternativeStorageDependencyProvider::getAlternativeProductApplicableCheckPlugins",
+        "source": "\\Spryker\\Client\\ProductDiscontinuedStorage\\Plugin\\ProductAlternativeStorage\\DiscontinuedCheckAlternativeProductApplicablePlugin",
+        "module": "Spryker.ProductDiscontinuedStorage",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.ProductGroupStorage": {
+    "wire-plugin": {
+      "49373909b2cf029e9b1f67610cbadc2d7ecd15fd": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductGroupStorage\\Communication\\Plugin\\Synchronization\\ProductGroupSynchronizationDataPlugin",
+        "module": "Spryker.ProductGroupStorage",
+        "module-version": "1.0.1"
+      },
+      "bedd54c99e6bb57130de7c7ffb78b7cb87cc6ad1": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductGroupStorage\\Communication\\Plugin\\Event\\ProductGroupEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductGroupStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductImageStorage": {
+    "wire-plugin": {
+      "279848fe77208e8f9f89ef1020a908ff725b6058": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductImageStorage\\Communication\\Plugin\\Synchronization\\ProductAbstractImageSynchronizationDataPlugin",
+        "module": "Spryker.ProductImageStorage",
+        "module-version": "1.0.1"
+      },
+      "36e85b1d6efa23f738961c887efc63160897e2e9": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductImageStorage\\Communication\\Plugin\\Synchronization\\ProductConcreteImageSynchronizationDataPlugin",
+        "module": "Spryker.ProductImageStorage",
+        "module-version": "1.0.1"
+      },
+      "3e6057d44e5704fa6cb3e09834713304b417b7e7": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductImageStorage\\Communication\\Plugin\\Event\\ProductAbstractImageEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductImageStorage",
+        "module-version": "1.0.1"
+      },
+      "981d351b87bf2d7d877275948183ddc55c9a6f6d": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductImageStorage\\Communication\\Plugin\\Event\\ProductConcreteImageEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductImageStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductMeasurementUnit": {
+    "wire-plugin": {
+      "df095c33bf4146534ac03d8184adf456dc570c3d": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductMeasurementUnit\\Communication\\Plugin\\Cart\\DefaultQuantitySalesUnitItemExpanderPlugin",
+        "module": "Spryker.ProductMeasurementUnit",
+        "module-version": "5.3.0"
+      },
+      "11fcf5af3f3da4fc47b446928624ba07b9039409": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductMeasurementUnit\\Communication\\Plugin\\Cart\\QuantitySalesUnitGroupKeyItemExpanderPlugin",
+        "module": "Spryker.ProductMeasurementUnit",
+        "module-version": "5.3.0"
+      },
+      "c7d878fc3dbd6d8a88a70b7d001730f99be77800": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ProductMeasurementUnit\\Communication\\Plugin\\Cart\\QuantitySalesUnitItemExpanderPlugin",
+        "module": "Spryker.ProductMeasurementUnit",
+        "module-version": "5.3.0"
+      },
+      "700f63c9ecde08ffe9164c76cc26b9222405d831": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getCartPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\ProductMeasurementUnit\\Communication\\Plugin\\Cart\\ProductMeasurementSalesUnitCartPreCheckPlugin",
+        "module": "Spryker.ProductMeasurementUnit",
+        "module-version": "5.3.0"
+      },
+      "b302240244a7a3ad5fb496ee9e7a217539d0b96d": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getPostSavePlugins",
+        "source": "\\Spryker\\Zed\\ProductMeasurementUnit\\Communication\\Plugin\\Cart\\QuantitySalesUnitValuePostSavePlugin",
+        "module": "Spryker.ProductMeasurementUnit",
+        "module-version": "5.3.0"
+      }
+    }
+  },
+  "Spryker.ProductOption": {
+    "wire-plugin": {
+      "60077c1757c2607ed7277c1ec6a5b1df85b7df20": {
+        "target": "\\Spryker\\Zed\\Calculation\\CalculationDependencyProvider::getQuoteCalculatorPluginStack",
+        "source": "\\Spryker\\Zed\\ProductOption\\Communication\\Plugin\\Calculation\\ProductOptionTaxRateCalculatorPlugin",
+        "module": "Spryker.ProductOption",
+        "module-version": "8.6.0"
+      }
+    }
+  },
+  "Spryker.ProductOptionStorage": {
+    "wire-plugin": {
+      "59dd9d122ee4c0148655c934d819e94f74f7a37d": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductOptionStorage\\Communication\\Plugin\\Synchronization\\ProductOptionSynchronizationDataPlugin",
+        "module": "Spryker.ProductOptionStorage",
+        "module-version": "1.0.1"
+      },
+      "1ccf5ee34441f91a3ac70d9b7b2ff8b69a262d0a": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductOptionStorage\\Communication\\Plugin\\Event\\ProductOptionEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductOptionStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductPackagingUnit": {
+    "wire-plugin": {
+      "7a75bbfd2de13263c4ffc186597d8c02130b7bb7": {
+        "target": "\\Spryker\\Zed\\ProductPageSearch\\ProductPageSearchDependencyProvider::getProductAbstractAddToCartPlugins",
+        "source": "\\Spryker\\Zed\\ProductPackagingUnit\\Communication\\Plugin\\ProductPageSearch\\ProductPackagingUnitProductAbstractAddToCartPlugin",
+        "module": "Spryker.ProductPackagingUnit",
+        "module-version": "4.4.0"
+      }
+    }
+  },
+  "Spryker.ProductPageSearch": {
+    "wire-plugin": {
+      "28965de66a40a62fd477fe1a0c280470ebc549ab": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductPageSearch\\Communication\\Plugin\\Synchronization\\ProductConcretePageSynchronizationDataBulkPlugin",
+        "module": "Spryker.ProductPageSearch",
+        "module-version": "3.16.0"
+      }
+    }
+  },
+  "Spryker.ProductPricesRestApi": {
+    "wire-plugin": {
+      "05da35523e53c5a7dbf2cba4ba017323675be8b8": {
+        "target": "\\Spryker\\Glue\\WishlistsRestApi\\WishlistsRestApiDependencyProvider::getRestWishlistItemsAttributesMapperPlugins",
+        "source": "\\Spryker\\Glue\\ProductPricesRestApi\\Plugin\\Wishlist\\ProductPriceRestWishlistItemsAttributesMapperPlugin",
+        "module": "Spryker.ProductPricesRestApi",
+        "module-version": "1.6.0"
+      }
+    }
+  },
+  "Spryker.ProductReviewSearch": {
+    "wire-plugin": {
+      "4c78e84f450e5c2a12dfb41dd70cfb02f4b7034d": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductReviewSearch\\Communication\\Plugin\\Synchronization\\ProductReviewSynchronizationDataPlugin",
+        "module": "Spryker.ProductReviewSearch",
+        "module-version": "1.0.1"
+      },
+      "825672b86952aa1cd9e072eafa790ec43d00c4fa": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductReviewSearch\\Communication\\Plugin\\Event\\ProductReviewEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductReviewSearch",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductReviewStorage": {
+    "wire-plugin": {
+      "e01f1202cf50bd0aae837974c8745c74d73f0dbe": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductReviewStorage\\Communication\\Plugin\\Synchronization\\ProductReviewSynchronizationDataPlugin",
+        "module": "Spryker.ProductReviewStorage",
+        "module-version": "1.0.1"
+      },
+      "615c3ae865db3f86e70b031e95fc9e653ea6abb1": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductReviewStorage\\Communication\\Plugin\\Event\\ProductReviewEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductReviewStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductSearchConfigStorage": {
+    "wire-plugin": {
+      "6fb3e2217516cc14c37db75882f83caf04d247b6": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductSearchConfigStorage\\Communication\\Plugin\\Synchronization\\ProductSearchConfigSynchronizationDataPlugin",
+        "module": "Spryker.ProductSearchConfigStorage",
+        "module-version": "1.0.1"
+      },
+      "d8097da9ac6b8dc12734db9bf290b3decac4ac31": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductSearchConfigStorage\\Communication\\Plugin\\Event\\ProductSearchConfigEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductSearchConfigStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.ProductSetPageSearch": {
+    "wire-plugin": {
+      "a758065c1dcb9291b02f49c27958306f5b7f8068": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductSetPageSearch\\Communication\\Plugin\\Synchronization\\ProductSetSynchronizationDataPlugin",
+        "module": "Spryker.ProductSetPageSearch",
+        "module-version": "1.0.2"
+      },
+      "84d4c10e922bd5e4a62708d415cb718c236a2738": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductSetPageSearch\\Communication\\Plugin\\Event\\ProductSetEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductSetPageSearch",
+        "module-version": "1.0.2"
+      }
+    }
+  },
+  "Spryker.ProductSetStorage": {
+    "wire-plugin": {
+      "41c99cf3d0fbc235a2d2bff1c53d143240e29ecf": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductSetStorage\\Communication\\Plugin\\Synchronization\\ProductSetSynchronizationDataPlugin",
+        "module": "Spryker.ProductSetStorage",
+        "module-version": "1.0.2"
+      },
+      "144658662a7017e99e9660098b5e6759042cd08c": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductSetStorage\\Communication\\Plugin\\Event\\ProductSetEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductSetStorage",
+        "module-version": "1.0.2"
+      }
+    }
+  },
+  "Spryker.ProductStorage": {
+    "wire-plugin": {
+      "f54d5c75d6009cab8b58c99dd56ae4a13b4e538b": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Synchronization\\ProductConcreteSynchronizationDataPlugin",
+        "module": "Spryker.ProductStorage",
+        "module-version": "1.0.1"
+      },
+      "37f2adf94922bf8fb46f5f180c8dcfbb2b9153cf": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Synchronization\\ProductAbstractSynchronizationDataPlugin",
+        "module": "Spryker.ProductStorage",
+        "module-version": "1.0.1"
+      },
+      "e6de0fd4eacff2c87bb7bf7ec9c2f746a276de71": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\ProductAbstractEventResourceQueryContainerPlugin",
+        "module": "Spryker.ProductStorage",
+        "module-version": "1.0.1"
+      }
+    }
+  },
+  "Spryker.Router": {
+    "wire-plugin": {
+      "9e55fd045608de1c13fc672484c299b6dd51825e": {
+        "target": "\\Spryker\\Yves\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
+        "source": "\\Spryker\\Yves\\Router\\Plugin\\EventDispatcher\\RouterLocaleEventDispatcherPlugin",
+        "module": "Spryker.Router",
+        "module-version": "1.0.0"
+      },
+      "f0d6ef66184abf6eb42283270d3e7c4947c5ee62": {
+        "target": "\\Spryker\\Zed\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
+        "source": "\\Spryker\\Zed\\Router\\Communication\\Plugin\\EventDispatcher\\RouterLocaleEventDispatcherPlugin",
+        "module": "Spryker.Router",
+        "module-version": "1.0.0"
       }
     }
   },
   "Spryker.Sales": {
-    "wire-plugin": {
-      "8acd5b51dbce690ba44335f6e383095acc6e4b9e": {
-        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
-        "source": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderSaverPlugin"
-      },
-      "529047d534207b1a4512794d4ed69d72ad800512": {
-        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
-        "source": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderTotalsSaverPlugin",
-        "poistion": {
-          "before": "\\Spryker\\Zed\\Shipment\\Communication\\Plugin\\Checkout\\SalesOrderShipmentSavePlugin",
-          "after": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderSaverPlugin"
-        }
-      },
-      "aa17d64d695cf74b2887af9c0701a12a9810e5c8": {
-        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
-        "source": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderItemsSaverPlugin",
-        "poistion": {
-          "after": "\\Spryker\\Zed\\Shipment\\Communication\\Plugin\\Checkout\\SalesOrderShipmentSavePlugin"
-        }
+    "configure-env": {
+      "e4e8ab23e19428fb0bb35374fdc271dc940e7bfd": {
+        "target": "\\Spryker\\Shared\\Sales\\SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING",
+        "value": {
+          "\\SprykerEco\\Zed\\Payone\\PayoneConfig::PAYMENT_METHOD_CREDIT_CARD": "PayoneCreditCardPartialOperations",
+          "\\SprykerEco\\Zed\\Payone\\PayoneConfig::PAYMENT_METHOD_INSTANT_ONLINE_TRANSFER": "PayoneOnlineTransferPartialOperations",
+          "\\Spryker\\Zed\\Payment\\PaymentConfig::PAYMENT_FOREIGN_PROVIDER": "B2CStateMachine01"
+        },
+        "module": "Spryker.Sales",
+        "module-version": "11.30.0"
       }
     },
-    "unwire-plugin": {
-      "f5ad68d52541dfe25a27c1adba51f8f281aeca6d": {
-        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
-        "source": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\SalesOrderSaverPlugin"
+    "configure-module": {
+      "be1954c980d72945ea52673206f657e7116bcd49": {
+        "value": false,
+        "target": "\\Spryker\\Zed\\Sales\\SalesConfig::isOldDeterminationForOrderItemProcessEnabled",
+        "module": "Spryker.Sales",
+        "module-version": "11.30.0"
+      }
+    }
+  },
+  "Spryker.SessionRedis": {
+    "wire-plugin": {
+      "e47f04d986c5cc0b169e5487b3fc398df86ba9ba": {
+        "target": "\\Spryker\\Yves\\SessionCustomerValidation\\SessionCustomerValidationDependencyProvider::getSessionCustomerSaverPlugin",
+        "source": "\\Spryker\\Yves\\SessionRedis\\Plugin\\SessionCustomerValidation\\SessionRedisSessionCustomerSaverPlugin",
+        "module": "Spryker.SessionRedis",
+        "module-version": "1.6.0"
+      },
+      "e403a95b97f190a517f8c2900613ee6fc2637b9b": {
+        "target": "\\Spryker\\Yves\\SessionCustomerValidation\\SessionCustomerValidationDependencyProvider::getSessionCustomerValidatorPlugin",
+        "source": "\\Spryker\\Yves\\SessionRedis\\Plugin\\SessionCustomerValidation\\SessionRedisSessionCustomerValidatorPlugin",
+        "module": "Spryker.SessionRedis",
+        "module-version": "1.6.0"
+      },
+      "ceee6761b45f24d232c0d094e2c00dbb6d6086d2": {
+        "target": "\\Spryker\\Zed\\SessionUserValidation\\SessionUserValidationDependencyProvider::getSessionUserSaverPlugin",
+        "source": "\\Spryker\\Zed\\SessionRedis\\Communication\\Plugin\\SessionUserValidation\\SessionRedisSessionUserSaverPlugin",
+        "module": "Spryker.SessionRedis",
+        "module-version": "1.6.0"
+      },
+      "7925cbcd718bafb3e1376e1c366a0a2d15c4e601": {
+        "target": "\\Spryker\\Zed\\SessionUserValidation\\SessionUserValidationDependencyProvider::getSessionUserValidatorPlugin",
+        "source": "\\Spryker\\Zed\\SessionRedis\\Communication\\Plugin\\SessionUserValidation\\SessionRedisSessionUserValidatorPlugin",
+        "module": "Spryker.SessionRedis",
+        "module-version": "1.6.0"
+      }
+    }
+  },
+  "Spryker.SharedCart": {
+    "wire-plugin": {
+      "78e3208ffeb52ca4cfe5797a534d819c6dcffc8c": {
+        "target": "\\Spryker\\Zed\\CartsRestApi\\CartsRestApiDependencyProvider::getQuoteCollectionExpanderPlugins",
+        "source": "\\Spryker\\Zed\\SharedCart\\Communication\\Plugin\\CartsRestApi\\SharedCartQuoteCollectionExpanderPlugin",
+        "module": "Spryker.SharedCart",
+        "module-version": "1.9.0"
+      }
+    }
+  },
+  "Spryker.SharedCartsRestApi": {
+    "wire-glue-relationship": {
+      "bccac298b187a574f810271b582f21f43656d184": {
+        "source": {
+          "\\Spryker\\Glue\\CartsRestApi\\CartsRestApiConfig::RESOURCE_CARTS": "\\Spryker\\Glue\\SharedCartsRestApi\\Plugin\\GlueApplication\\SharedCartByCartIdResourceRelationshipPlugin"
+        },
+        "module": "Spryker.SharedCartsRestApi",
+        "module-version": "1.0.0"
       }
     }
   },
   "Spryker.Shipment": {
     "wire-plugin": {
-      "fc05c42e2dc332924dfdc4c1089ee24fae5cd908": {
+      "aaf6640e6a35d5d02421de009562fb5229147de1": {
         "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
         "source": "\\Spryker\\Zed\\Shipment\\Communication\\Plugin\\Checkout\\SalesOrderShipmentSavePlugin",
-        "poistion": {
+        "position": {
           "before": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderItemsSaverPlugin",
           "after": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderTotalsSaverPlugin"
-        }
+        },
+        "module": "Spryker.Shipment",
+        "module-version": "8.7.0"
       }
     },
     "unwire-plugin": {
-      "0c9f39cebc63383a593f7f1bbd02ecc320b28e67": {
+      "42736d1106f9d729e05c71fde9b3df69962fdfd4": {
         "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
-        "source": "\\Spryker\\Zed\\Shipment\\Communication\\Plugin\\Checkout\\OrderShipmentSavePlugin"
+        "source": "\\Spryker\\Zed\\Shipment\\Communication\\Plugin\\Checkout\\OrderShipmentSavePlugin",
+        "module": "Spryker.Shipment",
+        "module-version": "8.7.0"
       }
     }
   },
-  "Spryker.ErrorHandler": {
+  "Spryker.ShipmentCartConnector": {
     "wire-plugin": {
-      "e66a74375ab68f3bc8aba340a998b66816ce1f9d": {
-        "target": "\\Spryker\\Zed\\ErrorHandler\\ErrorHandlerDependencyProvider::getExceptionHandlerStrategyPlugins",
-        "source": "\\Spryker\\Zed\\ErrorHandler\\Communication\\Plugin\\ExceptionHandler\\SubRequestExceptionHandlerStrategyPlugin"
+      "3136348dc208c7c83c282df7a009f657a14d0bb0": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getExpanderPlugins",
+        "source": "\\Spryker\\Zed\\ShipmentCartConnector\\Communication\\Plugin\\Cart\\SanitizeCartShipmentItemExpanderPlugin",
+        "module": "Spryker.ShipmentCartConnector",
+        "module-version": "2.1.0"
       },
-      "ac16d0f9ac60968061a659e1f9df4ce34a0dc77b": {
+      "157e43fef8a8a83f1e2e1733b30da324a2d41f19": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getPostSavePlugins",
+        "source": "\\Spryker\\Zed\\ShipmentCartConnector\\Communication\\Plugin\\Cart\\CartShipmentCartOperationPostSavePlugin",
+        "module": "Spryker.ShipmentCartConnector",
+        "module-version": "2.1.0"
+      }
+    }
+  },
+  "Spryker.Store": {
+    "wire-plugin": {
+      "2aff2daf98e9de5a87e49f31128d73d793b4b668": {
+        "target": "\\Spryker\\Zed\\Quote\\QuoteDependencyProvider::getQuoteValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Store\\Communication\\Plugin\\Quote\\QuoteStoreValidatorPlugin",
+        "module": "Spryker.Store",
+        "module-version": "1.11.0"
+      },
+      "e8208eb8621df349c479691d4e2f5699622bc51a": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageAttributeProviderPlugins",
+        "source": "\\Spryker\\Zed\\Store\\Communication\\Plugin\\MessageBroker\\CurrentStoreReferenceMessageAttributeProviderPlugin",
+        "module": "Spryker.Store",
+        "module-version": "1.16.0"
+      },
+      "cd225bca2f3e3bc6576bc00891c8ec93fddddcb2": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getExternalValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Store\\Communication\\Plugin\\MessageBroker\\StoreReferenceMessageValidatorPlugin",
+        "module": "Spryker.Store",
+        "module-version": "1.16.0"
+      },
+      "be6b0660ea4fc32d52890ea82f9fc75304130ffb": {
+        "target": "\\Spryker\\Zed\\OauthClient\\OauthClientDependencyProvider::getAccessTokenRequestExpanderPlugins",
+        "source": "\\Spryker\\Zed\\Store\\Communication\\Plugin\\OauthClient\\CurrentStoreReferenceAccessTokenRequestExpanderPlugin",
+        "module": "Spryker.Store",
+        "module-version": "1.16.0"
+      }
+    }
+  },
+  "Spryker.StoreGui": {
+    "wire-plugin": {
+      "0439ef3e65658dcc92fed3437d9739bbd6e8f4f7": {
+        "target": "\\Spryker\\Zed\\CategoryGui\\CategoryGuiDependencyProvider::getStoreRelationFormTypePlugin",
+        "source": "\\Spryker\\Zed\\StoreGui\\Communication\\Plugin\\Form\\StoreRelationDropdownFormTypePlugin",
+        "module": "Spryker.StoreGui",
+        "module-version": "1.1.0"
+      }
+    }
+  },
+  "Spryker.StoreReference": {
+    "wire-plugin": {
+      "4a3ac085cc54311bee71cad14f46261b84d16db4": {
+        "target": "\\Spryker\\Zed\\OauthClient\\OauthClientDependencyProvider::getAccessTokenRequestExpanderPlugins",
+        "source": "\\Spryker\\Zed\\StoreReference\\Communication\\Plugin\\OauthClient\\StoreReferenceAccessTokenRequestExpanderPlugin",
+        "module": "Spryker.StoreReference",
+        "module-version": "1.1.0"
+      }
+    }
+  },
+  "Spryker.StoresRestApi": {
+    "wire-plugin": {
+      "e62cd62d7881bea7bbba593fd2bfd52c32490571": {
+        "target": "\\Spryker\\Glue\\GlueApplication\\GlueApplicationDependencyProvider::getResourceRoutePlugins",
+        "source": "\\Spryker\\Glue\\StoresRestApi\\Plugin\\StoresResourceRoutePlugin",
+        "module": "Spryker.StoresRestApi",
+        "module-version": "1.0.0"
+      }
+    }
+  },
+  "Spryker.TaxProductConnector": {
+    "wire-plugin": {
+      "1ee8c4f3b7ab92996c8d8114dcd9e332bf0a5222": {
+        "target": "\\Spryker\\Zed\\Calculation\\CalculationDependencyProvider::getQuoteCalculatorPluginStack",
+        "source": "\\Spryker\\Zed\\TaxProductConnector\\Communication\\Plugin\\Calculation\\ProductItemTaxRateCalculatorPlugin",
+        "module": "Spryker.TaxProductConnector",
+        "module-version": "4.3.0"
+      }
+    }
+  },
+  "Spryker.Translator": {
+    "wire-plugin": {
+      "1b1cf63887ca2a2e11d62026c632809d172f2494": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackofficeApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Translator\\Communication\\Plugin\\Application\\TranslatorApplicationPlugin",
+        "module": "Spryker.Translator",
+        "module-version": "1.1.0"
+      },
+      "9477d69b8b67b566e550f7e0907f129fba1ce788": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackendGatewayApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Translator\\Communication\\Plugin\\Application\\TranslatorApplicationPlugin",
+        "module": "Spryker.Translator",
+        "module-version": "1.1.0"
+      },
+      "71e3fb8e16615c08a11ba70d09f31c52ec928dd1": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackendApiApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Translator\\Communication\\Plugin\\Application\\TranslatorApplicationPlugin",
+        "module": "Spryker.Translator",
+        "module-version": "1.1.0"
+      },
+      "e16738ab2addeb7a1104567c93fe5d9731f4ca97": {
+        "target": "\\Spryker\\Zed\\MerchantPortalApplication\\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Translator\\Communication\\Plugin\\Application\\TranslatorApplicationPlugin",
+        "module": "Spryker.Translator",
+        "module-version": "1.1.0"
+      },
+      "da33e10a36d8bfbc84a80e28d181fc1c03b4d724": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\Translator\\Communication\\Plugin\\Twig\\TranslatorTwigPlugin",
+        "module": "Spryker.Translator",
+        "module-version": "1.1.0"
+      }
+    }
+  },
+  "Spryker.Twig": {
+    "wire-plugin": {
+      "1a3f46b6da0d94b03237d131e2e848482aa3bb13": {
+        "target": "\\SprykerShop\\Yves\\ShopApplication\\ShopApplicationDependencyProvider::getApplicationPlugins",
+        "source": "\\Spryker\\Yves\\Twig\\Plugin\\Application\\TwigApplicationPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "7de5887168e98fbc032c30ad96a108d59de18b59": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\Spryker\\Yves\\Twig\\Plugin\\FilesystemTwigLoaderPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "8c71a7a6b196f6255258b235a1aa13aa1ff0ab6c": {
+        "target": "\\Spryker\\Yves\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\Spryker\\Yves\\Twig\\Plugin\\FormFilesystemTwigLoaderPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "0dbb2890ae59b6dae739bbeb45fa791e017275f9": {
         "target": "\\Spryker\\Zed\\EventDispatcher\\EventDispatcherDependencyProvider::getEventDispatcherPlugins",
-        "source": "\\Spryker\\Zed\\ErrorHandler\\Communication\\Plugin\\EventDispatcher\\ErrorPageEventDispatcherPlugin"
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\EventDispatcher\\TwigEventDispatcherPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "c176e05e88509f77396126d8fbaf74c6fd0ae747": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackofficeApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\Application\\TwigApplicationPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "b5825fb754df473f1f688d371a28f07e6b77c2bd": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackendGatewayApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\Application\\TwigApplicationPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "f66534aa5d6d2200cd7f84e015733015ba27b20e": {
+        "target": "\\Spryker\\Zed\\MerchantPortalApplication\\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins",
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\Application\\TwigApplicationPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "545efc1a6306898d19ef13f56d341d2263178494": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\FilesystemTwigLoaderPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
+      },
+      "ee1ebfca7f066512364617810cbc51328c7b3e10": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigLoaderPlugins",
+        "source": "\\Spryker\\Zed\\Twig\\Communication\\Plugin\\FormFilesystemTwigLoaderPlugin",
+        "module": "Spryker.Twig",
+        "module-version": "3.4.0"
       }
     }
   },
-  "Spryker.ProductReview": {
+  "Spryker.UrlStorage": {
     "wire-plugin": {
-      "f27996f6982a0ed3eca3ac18c1fe1f9d44ebf935": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkQueryExpanderPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\QueryExpander\\PaginatedProductReviewsQueryExpanderPlugin"
+      "e7249c450d0eb1a0af70e0966b9e8924147c0542": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Synchronization\\UrlRedirectSynchronizationDataPlugin",
+        "module": "Spryker.UrlStorage",
+        "module-version": "1.0.1"
       },
-      "440494c0ba35dab83c7daabfcc14e9856d30aaf9": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkQueryExpanderPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\QueryExpander\\ProductRatingAggregationBulkQueryExpanderPlugin"
+      "f424da100ab67b3f1eccd8d9344794975595c71c": {
+        "target": "\\Spryker\\Zed\\Synchronization\\SynchronizationDependencyProvider::getSynchronizationDataPlugins",
+        "source": "\\Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Synchronization\\UrlSynchronizationDataPlugin",
+        "module": "Spryker.UrlStorage",
+        "module-version": "1.0.1"
       },
-      "a06d63bea0182c3df1396870d35ea9510e318016": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkQueryExpanderPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\QueryExpander\\SortByCreatedAtQueryExpanderPlugin"
+      "0b8c452859b191a0e0d597e35d6d89861a0f99f6": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\UrlEventResourceQueryContainerPlugin",
+        "module": "Spryker.UrlStorage",
+        "module-version": "1.0.1"
       },
-      "9b63bb9bb88015da8937d1303e7d4517e2f34ee5": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkSearchResultFormatterPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\ResultFormatter\\ProductReviewsResultFormatterPlugin"
-      },
-      "e829390c0d3e7082fb04ae9fb9e55dd33649f2de": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkSearchResultFormatterPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\ResultFormatter\\PaginatedProductReviewsResultFormatterPlugin"
-      },
-      "1223b9cc8b32c6ac324afd39bf5d01b37df60e40": {
-        "target": "\\Spryker\\Client\\ProductReview\\ProductReviewDependencyProvider::getProductReviewsBulkSearchResultFormatterPlugins",
-        "source": "\\Spryker\\Client\\ProductReview\\Plugin\\Elasticsearch\\ResultFormatter\\ProductRatingAggregationBulkResultFormatterPlugin"
+      "b68ed9482c224daed048eb2a5f2c9c5e451c54ec": {
+        "target": "\\Spryker\\Zed\\EventBehavior\\EventBehaviorDependencyProvider::getEventTriggerResourcePlugins",
+        "source": "\\Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\RedirectEventResourceQueryContainerPlugin",
+        "module": "Spryker.UrlStorage",
+        "module-version": "1.0.1"
       }
     }
   },
-  "SprykerShop.CartPage": {
-    "configure-module": {
-      "e700340b159d4d3db250f3cdb22c1ad59b8c5844": {
-        "target": "\\SprykerShop\\Yves\\CartPage\\CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED",
-        "default": "true"
-      },
-      "ea9556b31e89fb55cd8b1fd78f6a57cd0388b354": {
-        "target": "\\SprykerShop\\Yves\\CartPage\\CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED",
-        "default": "true"
-      }
-    }
-  },
-  "SprykerShop.ProductGroupWidget": {
+  "Spryker.User": {
     "wire-plugin": {
-      "9015da332891be842d66fc2efa19a0a6f8cce817": {
-        "target": "\\SprykerShop\\Yves\\ProductGroupWidget\\ProductGroupWidgetDependencyProvider::getProductViewBulkExpanderPlugins",
-        "source": "\\SprykerShop\\Yves\\ProductReviewWidget\\Plugin\\ProductGroupWidget\\ProductReviewSummaryProductViewBulkExpanderPlugin"
+      "f495bb64ca16df97a4df7c5b4018e37d0714ac7a": {
+        "target": "\\Spryker\\Zed\\Twig\\TwigDependencyProvider::getTwigPlugins",
+        "source": "\\Spryker\\Zed\\User\\Communication\\Plugin\\Twig\\UserTwigPlugin",
+        "module": "Spryker.User",
+        "module-version": "3.8.0"
       }
-    },
-    "unwire-plugin": {
-      "b1054ad511ebe61009955b6963f256bec4d6c589": {
-        "target": "\\SprykerShop\\Yves\\ProductGroupWidget\\ProductGroupWidgetDependencyProvider::getProductViewExpanderPlugins",
-        "source": "\\SprykerShop\\Yves\\ProductReviewWidget\\Plugin\\ProductGroupWidget\\ProductReviewSummaryProductViewExpanderPlugin"
+    }
+  },
+  "Spryker.UserLocale": {
+    "wire-plugin": {
+      "cd70d31fae65f28d85f00038c022a9abd1ebd7b8": {
+        "target": "\\Spryker\\Zed\\Locale\\LocaleDependencyProvider::getLocalePlugin",
+        "source": "\\Spryker\\Zed\\UserLocale\\Communication\\Plugin\\Locale\\UserLocaleLocalePlugin",
+        "module": "Spryker.UserLocale",
+        "module-version": "1.1.0"
+      }
+    }
+  },
+  "Spryker.ZedNavigation": {
+    "wire-plugin": {
+      "83d32d1e441e348e63e606b5f8db6ffa374f5200": {
+        "target": "\\Spryker\\Zed\\ZedNavigation\\ZedNavigationDependencyProvider::getNavigationItemCollectionFilterPlugins",
+        "source": "\\Spryker\\Zed\\ZedNavigation\\Communication\\Plugin\\BackofficeNavigationItemCollectionFilterPlugin",
+        "module": "Spryker.ZedNavigation",
+        "module-version": "1.12.0"
+      }
+    }
+  },
+  "Spryker.Development": {
+    "wire-plugin": {
+      "73156dfc852929e9d196afc042b3cf0fcf3c2e98": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\Development\\Communication\\Console\\GenerateGlueBackendIdeAutoCompletionConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.Development",
+        "module-version": "3.31.0"
+      },
+      "13806d4dac773c840ca4e9455527193cd55b65e2": {
+        "target": "\\Spryker\\Zed\\Console\\ConsoleDependencyProvider::getConsoleCommands",
+        "source": "\\Spryker\\Zed\\Development\\Communication\\Console\\RemoveGlueBackendIdeAutoCompletionConsole",
+        "condition": "$this->getConfig()->isDevelopmentConsoleCommandsEnabled()",
+        "module": "Spryker.Development",
+        "module-version": "3.31.0"
+      }
+    }
+  },
+  "Spryker.Cart": {
+    "wire-plugin": {
+      "8d8289b67c19e53b3d1955055ba124b2016c8250": {
+        "target": "\\Spryker\\Zed\\Cart\\CartDependencyProvider::getExpanderPlugins",
+        "source": "\\Spryker\\Zed\\Cart\\Communication\\Plugin\\Cart\\GroupKeyWithCartIdentifierItemExpanderPlugin",
+        "module": "Spryker.Cart",
+        "module-version": "7.11.0"
+      }
+    }
+  },
+  "Spryker.Product": {
+    "wire-plugin": {
+      "d49a1a4409c718fb200e7922eeed071f2e2d11b3": {
+        "target": "\\Spryker\\Zed\\MessageBroker\\MessageBrokerDependencyProvider::getMessageHandlerPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\MessageBroker\\InitializeProductExportMessageHandlerPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      },
+      "8a07656981da8e002da40e29455ad37ca1a91843": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductExportPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\Publisher\\ProductConcreteExportedMessageBrokerPublisherPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      },
+      "86c743d192857f51c4e3b0d8b9645e461d70d61d": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductExportPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\Publisher\\ProductConcreteCreatedMessageBrokerPublisherPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      },
+      "c4944f95fb5ca4be5282b821bb9d2a41b8677d92": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductExportPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\Publisher\\ProductConcreteUpdatedMessageBrokerPublisherPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      },
+      "c33f6d2a28fc02bdb17da266ae0b8dc236ae361f": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductExportPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\Publisher\\ProductConcreteDeletedMessageBrokerPublisherPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      },
+      "923339206040eb76c5a93755b85950978f7e0a5b": {
+        "target": "\\Spryker\\Zed\\Publisher\\PublisherDependencyProvider::getProductExportPlugins",
+        "source": "\\Spryker\\Zed\\Product\\Communication\\Plugin\\Publisher\\ProductAbstractUpdatedMessageBrokerPublisherPlugin",
+        "module": "Spryker.Product",
+        "module-version": "6.29.0"
+      }
+    }
+  },
+  "Spryker.ProductImage": {
+    "wire-plugin": {
+      "2517716bc20a508583175127f9c10cd266cac8b2": {
+        "target": "\\Spryker\\Zed\\Product\\ProductDependencyProvider::getProductConcreteMergerPlugins",
+        "source": "\\Spryker\\Zed\\ProductImage\\Communication\\Plugin\\Product\\ImageSetProductConcreteMergerPlugin",
+        "module": "Spryker.ProductImage",
+        "module-version": "3.13.0"
+      }
+    }
+  },
+  "Spryker.Quote": {
+    "wire-plugin": {
+      "11bca7020cdea18537160d90c28eae0154147c89": {
+        "target": "\\Spryker\\Zed\\Comment\\CommentDependencyProvider::getCommentValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Quote\\Communication\\Plugins\\Comment\\QuoteCommentValidatorPlugin",
+        "module": "Spryker.Quote",
+        "module-version": "2.16.0"
+      }
+    }
+  },
+  "Spryker.UtilNumber": {
+    "wire-plugin": {
+      "e38c164a05154a3895a5d7331d098d7f498d8e0e": {
+        "target": "\\Spryker\\Zed\\Application\\ApplicationDependencyProvider::getBackofficeApplicationPlugins",
+        "source": "\\Spryker\\Zed\\UtilNumber\\Communication\\Plugin\\Application\\NumberFormatterApplicationPlugin",
+        "module": "Spryker.UtilNumber",
+        "module-version": "1.0.0"
       }
     }
   }
